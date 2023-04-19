@@ -1,3 +1,6 @@
+/**
+* Tag_Logo_-- représente un Objet dans le jeu qui possède le même nom de variable.
+*/
 0 spawn {
    while {alive Tag_Logo_01 || alive Tag_Logo_02} do {
    for "_i" from 0 to 359 do      {
