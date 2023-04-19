@@ -7,6 +7,9 @@ sleep 0.01;
 endMission "NOT_ALLOWED";
 };
 
+/**
+* Variable de lecture d'une vidéo au lancement de la session d'un utilisateur.
+*/
 //private _video = ["A3\Missions_F_EPA\video\A_in_intro.ogv"] spawn BIS_fnc_playVideo;
 
 _name = name player;
