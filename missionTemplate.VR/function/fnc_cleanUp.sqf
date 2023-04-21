@@ -4,6 +4,9 @@
     Public: No
 
     Description: Modifie la colométrie des NVG pour les joueurs. 
+
+    Example(s):
+       this addAction ["Nettoyer la zone", {[] spawn fnc_cleanup}, [], 1, true, true, "", ""];
 */
 
 fnc_cleanup = {
@@ -15,4 +18,3 @@ fnc_cleanup = {
     } forEach _objects;
     hint "Objets au sol nettoyés !";
 };
-player addAction ["Nettoyer la zone", {[] spawn fnc_cleanup}, [], 1, true, true, "", ""];
