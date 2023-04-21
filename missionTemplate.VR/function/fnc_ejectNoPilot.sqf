@@ -10,6 +10,4 @@
 //_pilotAccess = ["76561198063259158","76561198134513977","76561198127318244","76561198241719492","76561198254448634", "76561198327438969"];
 //_playerUID = getPlayerUID player; // Récupère l'UID64
 
-[player] call ace_medical_treatment_fnc_fullHealLocal
-
 
