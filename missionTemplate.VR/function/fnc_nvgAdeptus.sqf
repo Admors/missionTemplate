@@ -1,3 +1,11 @@
+/*
+    File: fnc_nvgAdeptus.sqf
+    Author: Admors pour Adeptus TEAM (adeptusrepublica.fr)
+    Public: No
+
+    Description: Modifie la colométrie des NVG pour les joueurs. 
+*/
+
 if (isDedicated) exitWith {};
 if (player != player) then {waitUntil {player == player};};
 
