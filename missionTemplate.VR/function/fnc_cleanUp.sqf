@@ -3,7 +3,7 @@
     Author: Admors pour Adeptus TEAM (adeptusrepublica.fr)
     Public: No
 
-    Description: Modifie la colométrie des NVG pour les joueurs. 
+    Description: Permet via a addAction de supprimer les items au sol.  
 
     Example(s):
        this addAction ["Nettoyer la zone", {[] spawn fnc_cleanup}, [], 1, true, true, "", ""];
@@ -18,3 +18,5 @@ fnc_cleanup = {
     } forEach _objects;
     hint "Objets au sol nettoyés !";
 };
+
+cleaner addAction ["Nettoyer la zone", {[] spawn fnc_cleanup}, [], 1, true, true, "", ""]; // Variable en jeu 'cleaner'
