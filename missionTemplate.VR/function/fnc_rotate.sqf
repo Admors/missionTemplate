@@ -1,15 +1,15 @@
 /*
-    File: fnc_rotate.sqf
-    Author: Admors pour Adeptus TEAM (adeptusrepublica.fr)
-    Public: No
+    Fichier: fnc_rotate.sqf
+    Auteur: Admors pour Adeptus TEAM (adeptusrepublica.fr)
+    Publique: Non
 
     Description:
         Effectue une rotation continue d'un objet si la condition Alive est VRAI. 
 
-    Parameter(s):
+    Paramètre(s):
         Objet
 
-    Example(s):
+    Exemple(s):
        Name Variable  (Tag_Logo_01)
 */
 

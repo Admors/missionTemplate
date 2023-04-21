@@ -1,7 +1,7 @@
 /*
-    File: fnc_thermalDisable.sqf
-    Author: Admors pour Adeptus TEAM (adeptusrepublica.fr)
-    Public: No
+    Fichier: fnc_thermalDisable.sqf
+    Auteur: Admors pour Adeptus TEAM (adeptusrepublica.fr)
+    Publique: Non
 
     Description: Désactive la vision Thermique pour un joueur tant que EMI_Broadcaster est Alive.
 */

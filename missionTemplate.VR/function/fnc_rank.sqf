@@ -1,7 +1,7 @@
  /*
-    File: fnc_rank.sqf
-    Author: Violt Created for American-Tactics.com (Closed) edit and improve by Admors for Adeptus TEAM (adeptusrepublica.fr).
-    Public: No
+    Fichier: fnc_rank.sqf
+    Auteur: Violt Created for American-Tactics.com (Closed) edit and improve by Admors for Adeptus TEAM (adeptusrepublica.fr).
+    Publique: Non
 
     Description: Assigne un rang à un utilisateur à l'aide d'une bibliothèque d'UID64. 
 */

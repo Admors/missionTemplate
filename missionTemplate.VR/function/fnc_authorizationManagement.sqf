@@ -1,10 +1,10 @@
 /*
-    File: fnc_authorizationManagement.sqf
-    Author: Admors pour Adeptus TEAM (adeptusrepublica.fr)
-    Public: No
+    Fichier: fnc_authorizationManagement.sqf
+    Auteur: Admors pour Adeptus TEAM (adeptusrepublica.fr)
+    Publique: Non
 
     Description: Permet via un addAction d'appliquer une habilitation à un utilisateur.
 
-    Example(s):
+    Exemple(s):
        
 */

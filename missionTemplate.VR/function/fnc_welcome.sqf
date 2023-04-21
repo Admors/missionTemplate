@@ -1,7 +1,7 @@
 /*
-    File: fnc_welcome.sqf
-    Author: Admors pour Adeptus TEAM (adeptusrepublica.fr)
-    Public: No
+    Fichier: fnc_welcome.sqf
+    Auteur: Admors pour Adeptus TEAM (adeptusrepublica.fr)
+    Publique: Non
 
     Description: Affiche une vidéo (Soon) et un message de bienvenue aux joueurs. 
 */

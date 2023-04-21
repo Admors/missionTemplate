@@ -1,11 +1,11 @@
 /*
-    File: fnc_cleanUp.sqf
-    Author: Admors pour Adeptus TEAM (adeptusrepublica.fr)
-    Public: No
+    Fichier: fnc_cleanUp.sqf
+    Auteur: Admors pour Adeptus TEAM (adeptusrepublica.fr)
+    Publique: Non
 
     Description: Permet via a addAction de supprimer les items au sol.  
 
-    Example(s):
+    Exemple(s):
        this addAction ["Nettoyer la zone", {[] spawn fnc_cleanup}, [], 1, true, true, "", ""];
 */
 
