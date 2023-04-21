@@ -1,1 +1,1 @@
-player setUnitLoadout (player getVariable ["Saved_Loadout",[]]);
+[player, [missionNamespace, "inventory_var"]] call BIS_fnc_loadInventory;
