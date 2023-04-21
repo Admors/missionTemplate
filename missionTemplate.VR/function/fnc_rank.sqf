@@ -3,10 +3,10 @@
     Author: Violt Created for American-Tactics.com (Closed) edit and improve by Admors for Adeptus TEAM (adeptusrepublica.fr).
     Public: No
 
-    Description: Assigne un rang à un utilisateur à l'aide d'une bibliothèque d'UID. 
+    Description: Assigne un rang à un utilisateur à l'aide d'une bibliothèque d'UID64. 
 */
 
-sleep 2; // Délai d'execution du Code
+sleep 2; // Délai d'execution
 
 CORPORAL        =    ["76561198218934540","76561198007972617","76561198195563307","76561198254448634"];
 SERGEANT        =    ["76561198272941463"];

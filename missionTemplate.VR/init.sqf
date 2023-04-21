@@ -7,10 +7,16 @@ _EndSplashScreen = {
 
 [] spawn _EndSplashScreen;
 
-[] execVM "script\fnc_nvgAdeptus.sqf";
+[] execVM "function\fnc_nvgAdeptus.sqf";
 
-[] execVM "script\fnc_rotate.sqf";
+[] execVM "function\fnc_rotate.sqf";
 
-[] execVM "script\fnc_rank.sqf";
+[] execVM "function\fnc_rank.sqf";
 
-[] execVM "script\fnc_cleanUp.sqf";
+[] execVM "function\fnc_cleanUp.sqf";
+
+[] execVM "function\fnc_medicalTreatment.sqf";
+
+[] execVM "function\fnc_authorizationManagement.sqf";
+
+[] execVM "function\fnc_thermalDisable.sqf";
