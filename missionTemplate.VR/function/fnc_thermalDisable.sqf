@@ -3,7 +3,7 @@
     Author: Admors pour Adeptus TEAM (adeptusrepublica.fr)
     Public: No
 
-    Description: Désactive la vision Thermique pour un joueur.
+    Description: Désactive la vision Thermique pour un joueur tant que EMI_Broadcaster est Alive.
 */
 
 _layer = 85125; 
