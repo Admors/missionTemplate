@@ -3,7 +3,7 @@
     Author: Admors pour Adeptus TEAM (adeptusrepublica.fr)
     Public: No
 
-    Description: Affiche une vidéo et un message de bienvenue aux joueurs. 
+    Description: Affiche une vidéo (Soon) et un message de bienvenue aux joueurs. 
 */
 _name = name player;
     20 = [
