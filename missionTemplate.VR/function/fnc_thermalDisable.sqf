@@ -8,7 +8,7 @@
 
 _layer = 85125; 
 
-while {true} do 
+while {Alive EMI_Broadcaster} do 
 { 
 if (currentVisionMode player == 2) then
 	{
