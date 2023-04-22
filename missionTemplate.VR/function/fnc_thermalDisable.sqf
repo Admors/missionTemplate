@@ -6,6 +6,8 @@
     Description: Désactive la vision Thermique pour un joueur tant que EMI_Broadcaster est Alive.
 */
 
+
+if(Alive EMI_Broadcaster) {
 _layer = 85125; 
 
 while {Alive EMI_Broadcaster} do 
@@ -17,4 +19,5 @@ if (currentVisionMode player == 2) then
 		_layer cutText ["", "PLAIN"];
 	};
 	sleep 1; 
+}
 }
