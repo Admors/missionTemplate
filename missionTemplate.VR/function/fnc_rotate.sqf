@@ -12,6 +12,7 @@
     Exemple(s):
        Name Variable  (Tag_Logo_01)
 */
+if (isNil {Tag_Logo_01} || isNil {Tag_Logo_02}) exitWith {};
 
 0 spawn {
    while {alive Tag_Logo_01 || alive Tag_Logo_02} do {
