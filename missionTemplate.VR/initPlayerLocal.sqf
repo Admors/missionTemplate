@@ -7,4 +7,4 @@ sleep 0.01;
 endMission "NOT_ALLOWED";
 };
 
-[] execVM "script\fnc_welcome.sqf";
+[] execVM "function\fnc_welcome.sqf";

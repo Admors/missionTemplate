@@ -8,6 +8,7 @@
     Exemple(s):     
        this addAction ["<t color='#FFFFFF' size='1.5'>Se soigner</t>", {player call ace_medical_treatment_fnc_fullHealLocal}];
 */
+if (isNil {heal}) exitWith {};
 
 [player] call ace_medical_treatment_fnc_fullHealLocal;
 heal addAction ["<t color='#FFFFFF' size='1.5'>Se soigner</t>", {player call ace_medical_treatment_fnc_fullHealLocal}]; // Variable en jeu 'heal'

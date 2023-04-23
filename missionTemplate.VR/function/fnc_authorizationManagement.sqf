@@ -8,3 +8,6 @@
     Exemple(s):
        
 */
+if (isNil {promote_medic}) exitWith {};
+if (isNil {promote_eng}) exitWith {};
+if (isNil {promote_eod}) exitWith {};

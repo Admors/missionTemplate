@@ -10,7 +10,7 @@
 */
 
 fnc_cleanup = {
-    private _objects = nearestObjects [position player, [], 10];
+    private _objects = nearestObjects [position player, ["GroundWeaponHolder","WeaponHolder","GroundWeaponHolderSimulated"], 10];
     {
         if (alive _x && !isPlayer _x) then {
             deleteVehicle _x;
