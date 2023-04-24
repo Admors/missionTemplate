@@ -1,5 +1,5 @@
 /*
-    Fichier: fnc_cleanUp.sqf
+    Fichier: fnc_cleanUp.sqf (Soon)
     Auteur: Admors pour Adeptus TEAM (adeptusrepublica.fr)
     Publique: Non
 
