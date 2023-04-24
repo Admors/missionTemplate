@@ -3,8 +3,7 @@
     Auteur: Admors pour Adeptus TEAM (adeptusrepublica.fr)
     Publique: Non
 
-    Description:
-        Effectue une rotation continue d'un objet si la condition Alive est VRAI. 
+    Description: Effectue une rotation continue d'un objet si la condition Alive est VRAI. 
 
     Paramètre(s):
         Objet
