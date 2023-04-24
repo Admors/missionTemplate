@@ -8,6 +8,7 @@
     Exemple(s):
        this addAction ["Nettoyer la zone", {[] spawn fnc_cleanup}, [], 1, true, true, "", ""];
 */
+if (isNil {cleaner}) exitWith {};
 
 fnc_cleanup = {
     private _objects = nearestObjects [position player, ["GroundWeaponHolder","WeaponHolder","GroundWeaponHolderSimulated"], 10];
