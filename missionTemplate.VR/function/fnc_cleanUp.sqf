@@ -7,6 +7,8 @@
 
     Exemple(s):
        this addAction ["Nettoyer la zone", {[] spawn fnc_cleanup}, [], 1, true, true, "", ""];
+
+    ERREUR : Non-Fonctionnel quelques bugs niveau de la validation
 */
 if (isNil {cleaner}) exitWith {};
 
