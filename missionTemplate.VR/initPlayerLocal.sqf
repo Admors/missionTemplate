@@ -8,3 +8,4 @@ endMission "NOT_ALLOWED";
 };
 
 [] execVM "function\fnc_welcome.sqf";
+[] execVM "functions\fnc_authAuto.sqf";

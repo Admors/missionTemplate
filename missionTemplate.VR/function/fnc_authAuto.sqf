@@ -16,7 +16,8 @@ EOD = ["76561198063259158","76561198134513977","76561198007972617","765611981273
 
 _playerUID = getPlayerUID player; 
 
-switch (true) do {
+{
+    switch (true) do {
     case (_playerUID in MEDICAL): {
         player setVariable ["ace_medical_medicclass", 2, true];
         player setUnitTrait ["medic", true];
@@ -29,4 +30,6 @@ switch (true) do {
         player setUnitTrait["explosiveSpecialist",true]
     };
 	default { hint "ERREUR : Vous n'avez aucune de ces facultés !" };
-};
+    };
+
+} forEach allPlayers;
