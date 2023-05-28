@@ -15,8 +15,6 @@ _EndSplashScreen = {
 
 [] execVM "function\fnc_medicalTreatment.sqf";
 
-[] execVM "function\fnc_authAuto.sqf";
-
 [] execVM "function\fnc_authTreatment.sqf";
 
 [] execVM "function\fnc_thermalDisable.sqf";

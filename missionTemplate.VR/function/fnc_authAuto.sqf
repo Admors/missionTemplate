@@ -14,22 +14,16 @@ MEDICAL = ["76561198218934540","76561198007972617","76561198272941463","76561198
 ENGINEER = ["76561198063259158","76561198134513977"];
 EOD = ["76561198063259158","76561198134513977","76561198007972617","76561198127318244","76561198272941463","76561198241719492"];
 
-_playerUID = getPlayerUID player; 
+private _playerUID = getPlayerUID _player; 
 
-{
-    switch (true) do {
-    case (_playerUID in MEDICAL): {
-        player setVariable ["ace_medical_medicclass", 2, true];
-        player setUnitTrait ["medic", true];
-    }; 
-    case(_playerUID in ENGINEER): {
-        player setUnitTrait["engineer", true];
-        player setUnitTrait["explosiveSpecialist",true];
-    };
-    case(_playerUID in EOD): {
-        player setUnitTrait["explosiveSpecialist",true]
-    };
-	default { hint "ERREUR : Vous n'avez aucune de ces facultés !" };
-    };
-
-} forEach allPlayers;
+if (_playerUID in MEDICAL) exitWith {
+    _player setVariable ["ace_medical_medicclass", 2, true];
+    _player setUnitTrait ["medic", true];
+};
+if (_playerUID in ENGINEER) exitWith {
+    _player setUnitTrait ["engineer", true];
+    _player setUnitTrait ["explosiveSpecialist",true];
+};
+if (_playerUID in EOD) exitWith {
+    _player setUnitTrait ["explosiveSpecialist",true]
+};
