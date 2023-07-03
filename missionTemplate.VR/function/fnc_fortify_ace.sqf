@@ -3,7 +3,7 @@
     Auteur: Admors pour Adeptus TEAM (adeptusrepublica.fr)
     Publique: Non
 
-    Description: Objet accessible dans le fortify 
+    Description: Permet l'ajout d'objet via le fortify ace en jeu. Il accorde la gestion de budget et les objets à placer.
 */
 
 [west, 450, [

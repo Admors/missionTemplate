@@ -21,6 +21,8 @@ _EndSplashScreen = {
 
 [] execVM "function\fnc_fortify_ace.sqf";
 
+//[] execVM "function\fnc_limited_arsenal.sqf";
+
 //[] execVM "function\fnc_ejectNoPilot.sqf";
 
 //[] execVM "function\fnc_cleanUp.sqf";
