@@ -19,6 +19,8 @@ _EndSplashScreen = {
 
 [] execVM "function\fnc_thermalDisable.sqf";
 
+[] execVM "function\fnc_fortify_ace.sqf";
+
 //[] execVM "function\fnc_ejectNoPilot.sqf";
 
 //[] execVM "function\fnc_cleanUp.sqf";
