@@ -10,8 +10,8 @@ removeGoggles player;
 
 comment "Add weapons";
 player addWeapon "JLTS_DC15S";
-player addWeapon "SWLW_PLX1";
-player addSecondaryWeaponItem "SWLW_plx1_at_mag";
+player addWeapon "ls_weapon_rps6";
+player addSecondaryWeaponItem "ls_mag_rpg_1rnd";
 
 comment "Add containers";
 player forceAddUniform "adeptus_trooper_uniform_v1";
@@ -35,19 +35,18 @@ for "_i" from 1 to 2 do {player addItemToBackpack "ACE_morphine";};
 for "_i" from 1 to 3 do {player addItemToBackpack "ACE_IR_Strobe_Item";};
 for "_i" from 1 to 2 do {player addItemToBackpack "ACE_epinephrine";};
 for "_i" from 1 to 9 do {player addItemToBackpack "JLTS_DC15A_mag";};
-for "_i" from 1 to 2 do {player addItemToBackpack "3AS_BaridumCore";};
+player addItemToBackpack "3AS_BaridumCore";
 for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShellRed";};
 for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShellGreen";};
 for "_i" from 1 to 2 do {player addItemToBackpack "OPTRE_M2_Smoke";};
-for "_i" from 1 to 2 do {player addItemToBackpack "SWLW_plx1_at_mag";};
-for "_i" from 1 to 2 do {player addItemToBackpack "SWLW_plx1_ap_mag";};
+for "_i" from 1 to 6 do {player addItemToBackpack "ls_mag_rpg_1rnd";};
 player addHeadgear "adeptus_helmet_p2_v1";
 player addGoggles "442_clone_p2_glasses";
 
 comment "Add items";
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
-player linkItem "ACE_Altimeter";
-player linkItem "SWLB_comlink_14";
+player linkItem "tf_microdagr";
+player linkItem "SWLB_comlink_1";
 player linkItem "ItemGPS";
 player linkItem "lsd_gar_standard_nvg";
