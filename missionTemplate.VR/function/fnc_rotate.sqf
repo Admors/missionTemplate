@@ -18,8 +18,6 @@ if (isNil {Tag_Logo_01} || isNil {Tag_Logo_02}) exitWith {};
    for "_i" from 0 to 359 do      {
          Tag_Logo_01 setDir _i;
          Tag_Logo_02 setDir _i + 180;
-         Tag_Logo_03 setDir _i;
-         Tag_Logo_04 setDir _i + 180;
          sleep 0.01
        };
    };
