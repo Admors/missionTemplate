@@ -598,7 +598,7 @@ force AVS_Jump_UNARMED_X = "8";
 force AVS_Jump_UNARMED_Z = "2.7";
 force AVS_Jumping = true;
 force AVS_Rolling = false;
-force AVS_Sliding = false;
+force AVS_Sliding = true;
 
 // Alternative Running (Client Settings)
 AR_EnableDisableAltRunMGBOLT = true;
@@ -1146,7 +1146,7 @@ force tts_beam_vaporiseBodies = true;
 
 // WebKnight Droids
 force WBK_Droid_b1_damage = "4";
-force WBK_Droid_b2_damage = "25";
+force WBK_Droid_b2_damage = "30";
 
 // WebKnight HeadLamps
 force WBK_HeadLamps_IsAIActivateHeadlamps = false;
