@@ -64,7 +64,7 @@ _availableWeapon = [
 ];
 
 
-//Populate with predefined items and whatever is already in the crate
+// Populate with predefined items and whatever is already in the crate
 
 [_crate, ["%ALL"]] call BIS_fnc_addVirtualBackpackCargo;
 
