@@ -30,5 +30,5 @@ respawnButton = 1;
 
 class CfgDebriefing {
     class NOT_ALLOWED
-        { title = "Ce Slot est réservé."; description = "Vous n'avez pas le droit d'occuper ce poste";};
+        { title = "Ce Slot est réservé."; description = "Vous n'êtes pas autorisé à occuper ce poste";};
 };
