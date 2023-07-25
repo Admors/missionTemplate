@@ -60,7 +60,8 @@ _availableWeapon = [
     "ls_weapon_at_plx1",
     "SWLW_PLX1",
     "ls_weapon_aa_plx1",
-    "SWLW_DC17"
+    "SWLW_DC17",
+    "442_RPS6"
 ];
 
 
