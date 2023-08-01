@@ -25,10 +25,19 @@ loadScreen = "\adeptus_extension\pictures\loadscreen.paa"; // loadScreen représ
 respawn = 3;
 respawnDelay = 5;
 respawnDialog = 0;
-respawnOnStart = 0; 
+respawnOnStart = -1; 
 respawnButton = 1; 
 
 class CfgDebriefing {
     class NOT_ALLOWED
         { title = "Ce Slot est réservé."; description = "Vous n'êtes pas autorisé à occuper ce poste";};
+    
+    class Teamspeak {
+    title = "Veuillez vous connecter au teamspeak !";
+    subTitle = "";
+    description = "Pour pouvoir rejoindre le serveur, vous devez être dans le canal TaskForce Radio.";
+    pictureBackground = "";
+    picture = "";
+    pictureColor[] = {0,0.3,0.6,1};
+};
 };

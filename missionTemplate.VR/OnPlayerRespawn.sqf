@@ -1,0 +1,1 @@
+[] execVM "function\fnc_respawnAnimation.sqf";
