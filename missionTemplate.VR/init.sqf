@@ -23,8 +23,6 @@ _EndSplashScreen = {
 
 [] execVM "function\fnc_load_equipement.sqf";
 
-[] execVM "function\fnc_teamspeak_check.sqf";
-
 //[] execVM "function\fnc_ejectNoPilot.sqf";
 
 //[] execVM "function\fnc_cleanUp.sqf";
