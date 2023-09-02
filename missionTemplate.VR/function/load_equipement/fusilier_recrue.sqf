@@ -32,7 +32,7 @@ player addItemToBackpack "ACE_Flashlight_XL50";
 player addItemToBackpack "ACE_microDAGR";
 for "_i" from 1 to 5 do {player addItemToBackpack "ACE_elasticBandage";};
 for "_i" from 1 to 5 do {player addItemToBackpack "ACE_packingBandage";};
-for "_i" from 1 to 2 do {player addItemToBackpack "ACE_morphine";};
+for "_i" from 1 to 5 do {player addItemToBackpack "ACE_morphine";};
 for "_i" from 1 to 3 do {player addItemToBackpack "ACE_IR_Strobe_Item";};
 for "_i" from 1 to 2 do {player addItemToBackpack "ACE_epinephrine";};
 for "_i" from 1 to 4 do {player addItemToBackpack "JLTS_stun_mag_long";};

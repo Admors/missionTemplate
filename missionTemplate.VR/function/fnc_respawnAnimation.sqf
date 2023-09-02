@@ -7,7 +7,6 @@
 
     Conditions: Nécessite un `respawnOnStart = -1;` pour fonctionner après lancement. Une condition if _oldUnit prévue.
 */
- player switchMove "Acts_Getting_Up_Player";
 
     ["ChromAberration", 200, [0.05, 0.05, true]] spawn {
         params ["_name", "_priority", "_effect", "_handle"];
