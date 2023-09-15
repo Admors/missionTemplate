@@ -47,3 +47,7 @@ player linkItem "ItemCompass";
 player linkItem "ACE_Altimeter";
 player linkItem "SWLB_comlink";
 player linkItem "ItemGPS";
+
+_color = "#FFFF00";
+_name = "Pilote";
+[parseText format ["<t font='PuristaBold'> Équipement ajouté avec succès <br/> </t> <t font='PuristaBold' size='1.6' color='%1'> %2 </t>", _color,_name], true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;

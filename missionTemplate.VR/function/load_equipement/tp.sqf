@@ -52,3 +52,7 @@ player linkItem "tf_microdagr";
 player linkItem "JLTS_clone_comlink_1";
 player linkItem "ItemGPS";
 player linkItem "lsd_gar_standardSPC_nvg";
+
+_color = "#388A73";
+_name = "Tireur de Précision";
+[parseText format ["<t font='PuristaBold'> Équipement ajouté avec succès <br/> </t> <t font='PuristaBold' size='1.6' color='%1'> %2 </t>", _color,_name], true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;

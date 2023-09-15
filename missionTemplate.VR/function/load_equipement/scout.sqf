@@ -52,3 +52,8 @@ player linkItem "ItemWatch";
 player linkItem "SWLB_comlink_2";
 player linkItem "ItemGPS";
 player linkItem "k_nvg_ti";
+
+_color = "#00FF00";
+_name = "Scout";
+[parseText format ["<t font='PuristaBold'> Équipement ajouté avec succès <br/> </t> <t font='PuristaBold' size='1.6' color='%1'> %2 </t>", _color,_name], true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+

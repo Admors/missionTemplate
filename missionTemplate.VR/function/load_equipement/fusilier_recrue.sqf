@@ -51,3 +51,7 @@ player linkItem "ACE_Altimeter";
 player linkItem "SWLB_comlink_1";
 player linkItem "ItemGPS";
 player linkItem "lsd_gar_standard_nvg";
+
+_color = "#FFFFFF";
+_name = "Recrue";
+[parseText format ["<t font='PuristaBold'> Équipement ajouté avec succès <br/> </t> <t font='PuristaBold' size='1.6' color='%1'> %2 </t>", _color,_name], true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;

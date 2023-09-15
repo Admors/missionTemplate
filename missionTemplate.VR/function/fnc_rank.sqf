@@ -25,5 +25,5 @@ switch (true) do {
     case (_playerUID in MAJOR)      : { player setRank "MAJOR"; };
     case (_playerUID in COLONEL)    : { player setRank "COLONEL"; };
 
-    default { hint "Vous êtes un Soldat !"; }; // Paramètre par défaut d'un joueur.    
+    default { player setRank "PRIVATE" }; // Paramètre par défaut d'un joueur.    
 };

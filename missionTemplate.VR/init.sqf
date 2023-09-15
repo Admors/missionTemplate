@@ -13,8 +13,6 @@ _EndSplashScreen = {
 
 [] execVM "function\fnc_rank.sqf";
 
-[] execVM "function\fnc_medicalTreatment.sqf";
-
 [] execVM "function\fnc_authTreatment.sqf";
 
 [] execVM "function\fnc_thermalDisable.sqf";
@@ -23,6 +21,4 @@ _EndSplashScreen = {
 
 [] execVM "function\fnc_load_equipement.sqf";
 
-//[] execVM "function\fnc_ejectNoPilot.sqf";
-
-//[] execVM "function\fnc_cleanUp.sqf";
+[] execVM "function\fnc_authAttribution.sqf";

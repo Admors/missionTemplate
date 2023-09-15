@@ -53,3 +53,6 @@ player linkItem "SWLB_comlink";
 player linkItem "ItemGPS";
 player linkItem "lsd_gar_artilleryGunner_nvg";
 
+_color = "#964B00";
+_name = "Artilleur Lourd";
+[parseText format ["<t font='PuristaBold'> Équipement ajouté avec succès <br/> </t> <t font='PuristaBold' size='1.6' color='%1'> %2 </t>", _color,_name], true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
