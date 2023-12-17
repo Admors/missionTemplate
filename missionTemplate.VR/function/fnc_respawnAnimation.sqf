@@ -6,6 +6,8 @@
 	Description: Effectue une animation, un effet visuel et un message à la réapparition. 
 
     Conditions: Nécessite un `respawnOnStart = -1;` pour fonctionner après lancement. Une condition if _oldUnit prévue.
+
+    Admors
 */
 
     ["ChromAberration", 200, [0.05, 0.05, true]] spawn {
