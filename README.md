@@ -6,6 +6,9 @@
 
 # Adeptus Mission Template - Arma 3
 
+> [!IMPORTANT]  
+> Veuillez noter que le contenu de cette ressource est destiné uniquement à l'usage interne de l'équipe Adeptus. Tout accès, utilisation ou distribution non autorisés sont strictement interdits.
+
 ## 🎫 Preset
 > - **Star Wars : 61St Adeptus Républica Preset**
 
