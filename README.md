@@ -15,9 +15,6 @@
 ## 🧩 Carte
 > - **VR**
 
-## 🏢 Adeptus TEAM
-> ### [Web](https://www.adeptusrepublica.fr)
-
 ## 🤝 Contributeurs
 > + [Admors](https://steamcommunity.com/profiles/76561198134513977)
 > + [SixOne](https://steamcommunity.com/profiles/76561198063259158)
