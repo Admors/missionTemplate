@@ -4,6 +4,7 @@
     Publique: Non
 
     Description: Assigne une spécialisation à un utilisateur à l'aide d'une bibliothèque d'UID64. 
+    TESTING
 */
 
 sleep 2; // Délai d'execution
