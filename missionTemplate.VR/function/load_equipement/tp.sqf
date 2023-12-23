@@ -16,9 +16,9 @@ player addWeapon "442_DC15SA";
 player addHandgunItem "442_127x33_10rnd_blue_mag";
 
 comment "Add containers";
-player forceAddUniform "adeptus_trooper_uniform_v1";
+player forceAddUniform "ar_trooperUniform_v1";
 player addVest "SWLB_clone_specialist_armor";
-player addBackpack "Adeptus_Backpack_radio_med";
+player addBackpack "ar_medium_radio_backpack";
 
 comment "Add binoculars";
 player addMagazine "Laserbatteries";
@@ -42,7 +42,7 @@ for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShellRed";};
 for "_i" from 1 to 2 do {player addItemToBackpack "OPTRE_M2_Smoke";};
 for "_i" from 1 to 7 do {player addItemToBackpack "JLTS_DC15X_mag";};
 for "_i" from 1 to 2 do {player addItemToBackpack "442_thermal_det_mag";};
-player addHeadgear "adeptus_helmet_barc";
+player addHeadgear "ar_barc_helmet";
 player addGoggles "442_clone_ab_barc_glasses";
 
 comment "Add items";

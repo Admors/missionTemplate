@@ -14,9 +14,9 @@ player addWeapon "JLTS_DC17SA";
 player addHandgunItem "JLTS_stun_mag_short";
 
 comment "Add containers";
-player forceAddUniform "adeptus_trooper_uniform_v1";
+player forceAddUniform "ar_trooperUniform_v1";
 player addVest "SWLB_CEE_ARF_Vest";
-player addBackpack "Adeptus_Backpack_radio";
+player addBackpack "ar_medium_radio_backpack";
 
 comment "Add binoculars";
 player addMagazine "Laserbatteries";
@@ -41,7 +41,7 @@ for "_i" from 1 to 2 do {player addItemToBackpack "3AS_BaridumCore";};
 for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShellRed";};
 for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShellGreen";};
 player addItemToBackpack "OPTRE_M2_Smoke";
-player addHeadgear "adeptus_helmet_arf";
+player addHeadgear "ar_phase1Arf_helmet";
 player addGoggles "442_clone_arf_glasses";
 
 comment "Add items";

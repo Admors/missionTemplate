@@ -14,9 +14,9 @@ player addWeapon "ls_weapon_rps6";
 player addSecondaryWeaponItem "ls_mag_rpg_1rnd";
 
 comment "Add containers";
-player forceAddUniform "adeptus_trooper_uniform_v1";
+player forceAddUniform "ar_trooperUniform_v1";
 player addVest "SWLB_clone_specialist_armor";
-player addBackpack "Adeptus_Backpack_rocket";
+player addBackpack "ar_rocket_backpack";
 
 comment "Add binoculars";
 player addMagazine "Laserbatteries";
@@ -40,7 +40,7 @@ for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShellRed";};
 for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShellGreen";};
 for "_i" from 1 to 2 do {player addItemToBackpack "OPTRE_M2_Smoke";};
 for "_i" from 1 to 6 do {player addItemToBackpack "ls_mag_rpg_1rnd";};
-player addHeadgear "adeptus_helmet_p2_v1";
+player addHeadgear "ar_p2_helmet_v1";
 player addGoggles "442_clone_p2_glasses";
 
 comment "Add items";

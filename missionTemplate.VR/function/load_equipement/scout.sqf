@@ -14,9 +14,9 @@ player addWeapon "JLTS_DC17SA";
 player addHandgunItem "JLTS_DC17SA_flashlight";
 
 comment "Add containers";
-player forceAddUniform "adeptus_trooper_uniform_scout";
+player forceAddUniform "ar_trooperUniform_scout";
 player addVest "SWLB_clone_recon_armor";
-player addBackpack "Adeptus_Backpack_radio_med";
+player addBackpack "ar_medium_radio_backpack";
 
 comment "Add binoculars";
 player addMagazine "Laserbatteries";
@@ -42,7 +42,7 @@ for "_i" from 1 to 10 do {player addItemToBackpack "JLTS_DC15S_mag";};
 for "_i" from 1 to 2 do {player addItemToBackpack "3AS_SmokeWhite";};
 for "_i" from 1 to 2 do {player addItemToBackpack "3AS_ThermalDetonator";};
 player addItemToBackpack "JLTS_DC17SA_mag";
-player addHeadgear "adeptus_helmet_scout";
+player addHeadgear "ar_scout_helmet";
 player addGoggles "442_clone_arf_glasses";
 
 comment "Add items";
