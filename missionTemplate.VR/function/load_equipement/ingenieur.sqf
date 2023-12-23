@@ -14,9 +14,9 @@ player addWeapon "JLTS_DC17SA";
 player addHandgunItem "JLTS_stun_mag_short";
 
 comment "Add containers";
-player forceAddUniform "adeptus_trooper_uniform_eng";
+player forceAddUniform "ar_trooperUniform_eng";
 player addVest "SWLB_CEE_Engineer_Vest";
-player addBackpack "Adeptus_Backpack_EOD";
+player addBackpack "ar_eod_backpack";
 
 comment "Add binoculars";
 player addMagazine "Laserbatteries";
@@ -50,7 +50,7 @@ for "_i" from 1 to 2 do {player addItemToBackpack "OPTRE_M2_Smoke";};
 player addItemToBackpack "JLTS_grenade_emp_mag";
 player addItemToBackpack "SquadShieldMagazine";
 for "_i" from 1 to 2 do {player addItemToBackpack "ShieldGrenade_Mag";};
-player addHeadgear "adeptus_helmet_eng_p2";
+player addHeadgear "ar_phase2Engineer_helmet";
 player addGoggles "442_clone_arf_glasses";
 
 comment "Add items";

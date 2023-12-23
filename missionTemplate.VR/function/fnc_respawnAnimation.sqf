@@ -7,8 +7,6 @@
 
     Conditions: Nécessite un `respawnOnStart = -1;` pour fonctionner après lancement. Une condition if _oldUnit prévue.
 
-    Testing
-
 */
 
     ["ChromAberration", 200, [0.05, 0.05, true]] spawn {

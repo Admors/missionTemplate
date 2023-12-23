@@ -13,7 +13,7 @@ player addWeapon "JLTS_DC17SA";
 player addHandgunItem "JLTS_stun_mag_short";
 
 comment "Add containers";
-player forceAddUniform "adeptus_trooper_uniform_v1";
+player forceAddUniform "ar_trooperUniform_v1";
 player addVest "SWLB_clone_basic_armor";
 player addBackpack "SWLB_CEE_Recon_RTO_Backpack";
 
@@ -38,7 +38,7 @@ for "_i" from 1 to 5 do {player addItemToVest "ACE_packingBandage";};
 for "_i" from 1 to 2 do {player addItemToVest "ACE_morphine";};
 for "_i" from 1 to 3 do {player addItemToVest "ACE_IR_Strobe_Item";};
 for "_i" from 1 to 2 do {player addItemToVest "ACE_epinephrine";};
-player addHeadgear "adeptus_helmet_pilot_p2";
+player addHeadgear "ar_phase2Pilot_helmet";
 player addGoggles "442_clone_p2_glasses";
 
 comment "Add items";
