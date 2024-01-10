@@ -28,6 +28,15 @@ respawnDialog = 0;
 respawnOnStart = -1; 
 respawnButton = 1; 
 
+class CfgSounds {
+	sounds[] = {};
+	class shocked1 {
+		name =  "shocked1";
+		sound[] = {"sound\shocked_sound.ogg", 1, 1};
+		titles[] = {0, ""};
+	};
+};
+
 class CfgDebriefing {
     class NOT_ALLOWED
         { title = "Ce Slot est réservé."; description = "Vous n'êtes pas autorisé à occuper ce poste";};
