@@ -9,17 +9,19 @@
 
 if (isNil {load_terminal}) exitWith {};
 
-load_terminal addAction ["<t color='#FFFFFF'>Clone Recrue</t>", "function\load_equipement\fusilier_recrue.sqf"];  
-load_terminal addAction ["<t color='#FFFFFF'>Clone DC-15S</t>", "function\load_equipement\fusilier_dc15s.sqf"];  
-load_terminal addAction ["<t color='#FFFFFF'>Clone DC-15A</t>", "function\load_equipement\fusilier_dc15a.sqf"];  
-load_terminal addAction ["<t color='#964B00'>Clone Grenadier</t>", "function\load_equipement\fusilier_gre.sqf"];  
-load_terminal addAction ["<t color='#964B00'>Clone Artilleur Lourd</t>", "function\load_equipement\artilleur_lourd.sqf"];  
-load_terminal addAction ["<t color='#A020F0'>Clone Ingénieur</t>", "function\load_equipement\ingenieur.sqf"];  
-load_terminal addAction ["<t color='#FF0000'>Clone Médecin</t>", "function\load_equipement\medecin.sqf"];  
-load_terminal addAction ["<t color='#00FF00'>Clone Scout</t>", "function\load_equipement\scout.sqf"];  
-load_terminal addAction ["<t color='#228B22'>Clone ARF</t>", "function\load_equipement\reconnaissance.sqf"];  
-load_terminal addAction ["<t color='#388a73'>Clone Tireur de Précision</t>", "function\load_equipement\tp.sqf"];  
-load_terminal addAction ["<t color='#FFFF00'>Clone Pilote</t>", "function\load_equipement\pilote.sqf"];  
-load_terminal addAction ["<t color='#0000FF'>Clone AT</t>", "function\load_equipement\at.sqf"];  
-load_terminal addAction ["<t color='#1e6d85'>Clone Opérateur</t>", "function\load_equipement\operateur.sqf"];  
-load_terminal addAction ["<t color='#FF7F00'>Clone EOD</t>", "function\load_equipement\eod.sqf"];
+#define ADD_ACTION(_terminal, _text, _script, _radius) _terminal addAction [_text, {_script}, nil, 1.5, true, true, "", "true", _radius, false, "", ""]
+
+ADD_ACTION(load_terminal, "<t color='#FFFFFF'>Clone Recrue</t>", execVM "function\load_equipement_adeptus\fusilier_recrue.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#FFFFFF'>Clone DC-15S</t>", execVM "function\load_equipement_adeptus\fusilier_dc15s.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#FFFFFF'>Clone DC-15A</t>", execVM "function\load_equipement_adeptus\fusilier_dc15a.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#964B00'>Clone Grenadier</t>", execVM "function\load_equipement_adeptus\fusilier_gre.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#964B00'>Clone Artilleur Lourd</t>", execVM "function\load_equipement_adeptus\artilleur_lourd.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#A020F0'>Clone Ingénieur</t>", execVM "function\load_equipement_adeptus\ingenieur.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#FF0000'>Clone Médecin</t>", execVM "function\load_equipement_adeptus\medecin.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#00FF00'>Clone Scout</t>", execVM "function\load_equipement_adeptus\scout.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#228B22'>Clone ARF</t>", execVM "function\load_equipement_adeptus\reconnaissance.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#388a73'>Clone Tireur de Précision</t>", execVM "function\load_equipement_adeptus\tp.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#FFFF00'>Clone Pilote</t>", execVM "function\load_equipement_adeptus\pilote.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#0000FF'>Clone AT</t>", execVM "function\load_equipement_adeptus\at.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#1e6d85'>Clone Opérateur</t>", execVM "function\load_equipement_adeptus\operateur.sqf", 5);
+ADD_ACTION(load_terminal, "<t color='#FF7F00'>Clone EOD</t>", execVM "function\load_equipement_adeptus\eod.sqf", 5);
