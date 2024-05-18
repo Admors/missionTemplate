@@ -32,7 +32,7 @@ fnc_signals = {
     playSound3D ["swlb_core\sounds\Alarm_1.wss", player];
     titleText ["<t align='center' shadow='2' color='#cc0000' size='1.2' font='RobotoCondensedBold'>Holo Alert</t><t color='#ffffff' size='1.2' font='RobotoCondensed'> : Purgatoire à équipe... Rassemblement : Hangar Principal... Ceci n'est pas un exercice ! </t>", "PLAIN DOWN", -1, true, true];  
 
-    for "_i" from 1 to 29 do { 
+    for "_i" from 1 to 10 do { 
             sleep 5;
             playSound3D ["swlb_core\sounds\Alarm_1.wss", player];
      };
