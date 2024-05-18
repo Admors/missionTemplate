@@ -41,7 +41,7 @@ for "_i" from 1 to 2 do {player addItemToBackpack "3AS_BaridumCore";};
 for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShellRed";};
 for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShellGreen";};
 for "_i" from 1 to 2 do {player addItemToBackpack "OPTRE_M2_Smoke";};
-player addHeadgear "ar_p2_helmet_v3";
+player addHeadgear "ar_p2_helmet_v2";
 player addGoggles "442_clone_p2_glasses";
 
 comment "Add items";

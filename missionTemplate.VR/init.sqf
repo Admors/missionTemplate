@@ -22,3 +22,5 @@ _EndSplashScreen = {
 [] execVM "function\fnc_load_equipement.sqf";
 
 [] execVM "function\fnc_authAttribution.sqf";
+
+[] execVM "function\fnc_teleport.sqf";
