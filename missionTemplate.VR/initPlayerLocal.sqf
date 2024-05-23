@@ -27,10 +27,8 @@ player addEventHandler ["FiredNear", {
 					sleep 0.25;
 				};
 			};
+			[" <t color='#00FF00'<t size='2.0'><img image='a3\ui_f_curator\data\rsccommon\rscattributebehaviour\safe_ca.paa'/></t></t>", 5] spawn fnc_hintDisplayTexts;
 		};
-		hintSilent parseText " <t color='#00FF00'<t size='2.0'><img image='\a3\ui_f\data\igui\cfg\simpletasks\types\destroy_ca.paa'/></t></t>";
-		sleep 1;
-		hintSilent "";
 	};
 }];
 
