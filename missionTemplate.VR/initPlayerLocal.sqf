@@ -7,6 +7,19 @@ fnc_reservedSlot = {
 	endMission "NOT_ALLOWED";
 };
 
+/**
+    Affiche un indice à l'écran pendant un certain laps de temps.
+
+    Cette fonction prend une chaîne de caractères et une durée en secondes en tant que paramètres.
+    Elle affiche l'indice silencieusement à l'écran pendant la durée spécifiée, puis le retire.
+
+    Parameters:
+    _string (string): La chaîne de caractères à afficher en tant qu'indice.
+    _time (number): La durée en secondes pendant laquelle l'indice est affiché.
+
+    Exemple d'utilisation:
+    fnc_hintDisplayTexts "Ceci est un message d'indice." 5;  // Affiche "Ceci est un message d'indice." pendant 5 secondes
+ */
 fnc_hintDisplayTexts = {
     params["_string", "_time"];
     hintSilent parseText _string;
@@ -32,13 +45,26 @@ player addEventHandler ["FiredNear", {
     };
 }];
 
+/**
+    Gère l'affichage des marqueurs pour les joueurs inconscients, visibles uniquement par les médecins.
 
-//----------------------------------------------------//
+    Ce script vérifie périodiquement si le joueur est un médecin ou possède des compétences médicales.
+    Pour chaque joueur, s'il est inconscient, un marqueur est créé à sa position actuelle.
+    Ce marqueur est visible uniquement pour les médecins et indique le nom du joueur inconscient.
+    Si un joueur redevient conscient, son marqueur est supprimé.
 
+    Si aucun médecin n'est présent, tous les marqueurs associés à des joueurs inconscients sont supprimés.
 
+    Remarque : Ce script suppose que les fonctions `lifestate`, `getPosATL`, `createMarkerLocal`, 
+    `setMarkerShapeLocal`, `setMarkerTypeLocal`, `setMarkerColorLocal`, `setMarkerTextLocal`, 
+    `deleteMarkerLocal`, `getUnitTrait` sont définies ailleurs dans le code.
+
+    Exemple d'utilisation :
+    Ce script signale aux médecins la présence de joueurs inconscients.
+ */
 private _unconsciousMarkers = [];
 
-while { true } do {
+while { sleep 5; alive player } do {
     // Vérifier si le joueur courant est un médecin
     private _medicLevel = player getVariable ["ace_medical_medicClass", 0];
     private _medicTrait = player getUnitTrait "Medic";
@@ -74,7 +100,6 @@ while { true } do {
             };
         } forEach allPlayers;
 
-        sleep 5;
     } else {
         // Supprimer tous les marqueurs associés à des joueurs inconscients
         {
@@ -86,7 +111,6 @@ while { true } do {
             };
         } forEach allPlayers;
 
-        sleep 5;
     };
 };
 
