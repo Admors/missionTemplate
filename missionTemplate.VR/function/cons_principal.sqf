@@ -1,6 +1,6 @@
 /*
     Fichier: fnc_message
-    Auteur: Admors pour Adeptus TEAM (adeptusrepublica.fr)
+    Auteur: Techniciens Adeptus pour Adeptus TEAM (adeptusrepublica.fr)
     Publique: Non
 
     Description: this execVM "function\cons_principal.sqf";
@@ -22,6 +22,16 @@
         "" \
     ];
 
+/**
+    Joue des sons d'alarme et affiche des messages d'alerte à l'écran.
+
+    Cette fonction joue un son d'alarme 3D et affiche un message d'alerte à l'écran indiquant une évacuation.
+    Après un délai, elle répète cette alerte deux fois, puis affiche un message final indiquant un rassemblement au hangar principal.
+    Ensuite, elle joue le son d'alarme 3D dix fois de plus avec des pauses entre chaque répétition.
+
+    Exemple d'utilisation:
+    fnc_signals;  // Lance les alarmes sonores et affiche les messages d'alerte à l'écran
+ */
 fnc_signals = {
     playSound3D ["swlb_core\sounds\Alarm_1.wss", player];
     titleText ["<t align='center' shadow='2' color='#cc0000' size='1.2' font='RobotoCondensedBold'>Holo Alert</t><t color='#ffffff' size='1.2' font='RobotoCondensed'> : Purgatoire à équipage... Evacuation !", "PLAIN DOWN", -1, true, true];
@@ -39,15 +49,19 @@ fnc_signals = {
 
 };
 
-// Fonction cache les Energyshield quand le venator est dans l'atmosphère.
-// La Fonction parcoure 8 objets avec format qui permet d'avoir le non de la variable. 
-// Puis ont récupère l'objet qui correspond au nom de la variable.
-//
-//  Params : 
-//  [_bool] = un booléen qui permet de cacher quand true, et d'afficher quand false.
-//
-//
+/**
+    Active ou désactive les boucliers énergétiques.
 
+    Cette fonction parcourt une série de boucliers énergétiques nommés 'MAIN_SHIELD_1' à 'MAIN_SHIELD_10' 
+    et les masque ou les rend visibles globalement selon la valeur de _bool.
+
+    Parameters:
+    _bool (bool): Indique si les boucliers doivent être activés (True) ou désactivés (False).
+
+    Exemple d'utilisation:
+    fnc_energyshields = true;  # Activer tous les boucliers énergétiques
+    fnc_energyshields = false; # Désactiver tous les boucliers énergétiques
+ */
 fnc_energyshields = {
     params["_bool"];
     for "_i" from 1 to 10 do {
@@ -57,6 +71,17 @@ fnc_energyshields = {
     };
 };
 
+/**
+    Gère l'activation et la désactivation de l'environnement spatial.
+
+    Cette fonction joue un son, puis après un délai, elle vérifie si l'objet `env_space` est caché. 
+    Si c'est le cas, elle affiche `env_space` ainsi que les boucliers des hangars, et désactive les boucliers énergétiques globaux. 
+    Si `env_space` est visible, elle le masque, masque les boucliers des hangars, et active les boucliers énergétiques globaux. 
+    Un message textuel est affiché à l'écran pour informer de l'état actuel (entrée ou sortie de l'atmosphère).
+
+    Exemple d'utilisation:
+    fnc_space;  // Active ou désactive l'environnement spatial et les boucliers en conséquence
+ */
 fnc_space = {
     playSound "FTL_OUT_1";
 
