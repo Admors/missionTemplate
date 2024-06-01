@@ -7,10 +7,10 @@
 */
 
 params["_object"];
-
+_object hideObjectGlobal true;
 /*private _light = createVehicle["#lightpoint", getPosATL _object];
 	_light attachTo [_object, [0, 0, 0]];
 	_light setLightColor [1, 1, 1];
 	_light setLightAmbient [1, 1, 1];
 	_light setLightBrightness 1;
-_object hideObjectGlobal true;// / Code pour une future mise à jours
+*/
