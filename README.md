@@ -16,18 +16,8 @@
 > - **VR**
 
 ## 🤝 Contributeurs
-> + [Admors](https://steamcommunity.com/profiles/76561198134513977)
-> + [SixOne](https://steamcommunity.com/profiles/76561198063259158)
-
-## 💾 Patch 15-09-23
-```bash
-↻ Modification ace_config `Correctif`
-↻ Modification fnc_load_equipement `Correctif`
-↻ Modification fnc_respawnAnimation `Correctif`
-↻ Modification fnc_rank `Correctif`
-↻ Modification fnc_authTreatement `Correctif`
-↻ Ajout fnc_authAttribution
-↻ Ajout initServer `Zeus`
-↻ Retrait fnc_authAuto
-↻ Retrait fnc_medicalTreatment
-```
+<div align="center">
+  <a href="https://github.com/admors/missionTemplate/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=admors/missionTemplate"/>
+  </a>
+</div>
