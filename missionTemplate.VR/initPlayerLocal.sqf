@@ -32,16 +32,15 @@ fnc_hintDisplayTexts = {
 	hintSilent "";
 };
 
-
 player addEventHandler ["FiredNear", {
 	params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
 	if (!((vehicle player) == player)) exitWith {};
-	if (!(isNull getAssignedCuratorLogic player)) exitWith{};
+	if (!(isNull getAssignedCuratorLogic player)) exitWith {};
 	countdownTime = time + 60;
 	if (alive player) then {
 		_unit spawn {
 			while { (countdownTime - time) > 0 } do {
-				if (cameraView == "EXTERNAL" && (vehicle player) == player) then {
+				if (cameraView == "EXTERNAL") then {
 					[" <t color='#FF0000'<t size='2.0'><img image='a3\ui_f_curator\data\rsccommon\rscattributebehaviour\combat_ca.paa'/></t><br/><br/>Vous êtes en combat !</t>", 5] spawn fnc_hintDisplayTexts;
 					player switchCamera "INTERNAL";
 					sleep 0.25;
