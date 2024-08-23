@@ -1,9 +1,4 @@
 player setUnitLoadout (player getVariable ["Saved_Loadout", []]);
-
-/*player spawn {
-		[20] remoteExec["setAperture", 0, true];
-		sleep 0.1;
-};*/ // Code pour une future mise a jour
 	
 	fnc_reservedSlot = {
 		player enableSimulationGlobal false;
