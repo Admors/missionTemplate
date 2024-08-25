@@ -25,15 +25,10 @@ PLP_fnc_revive = {
 	missionNamespace setVariable ["medicUnit", _unit];
 };
 
-if (!(alive medicUnit)) then {
-	medicUnit remoteExecCall ["PLP_fnc_revive"];
-	medicUnit switchMove "UnconsciousReviveArms";
-	// medicUnit setUnitPos "DOWN";
-} else {
-	medicUnit switchMove "UnconsciousReviveArms";
-	[medicUnit, "\sfa_boosts\functions\ace\fn_fullHealLocal.sqf"] remoteExec ["execVM", 0, true];
-	// [medicUnit] execVM "\sfa_boosts\functions\ace\fn_fullHealLocal.sqf";
-};
 hintSilent "Le sujet a été soigné.";
+medicUnit remoteExecCall ["PLP_fnc_revive"];
+medicUnit switchMove "UnconsciousReviveArms";
+[[medicUnit, true, 99999, false], ace_medical_fnc_setUnconscious] remoteExec ["call", 0, true];
+
 sleep 10;
 hintSilent "";
