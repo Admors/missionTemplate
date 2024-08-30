@@ -19,7 +19,7 @@ player setUnitLoadout (player getVariable ["Saved_Loadout", []]);
 	
 	    Exemple d'utilisation:
     fnc_hintDisplayTexts "Ceci est un message d'indice." 5;  // Affiche "Ceci est un message d'indice." pendant 5 secondes
- */
+
 fnc_hintDisplayTexts = {
 	params["_string", "_time"];
 	hintSilent parseText _string;
@@ -45,6 +45,7 @@ player addEventHandler ["FiredNear", {
 		};
 	};
 }];
+ */
 
 /**
 	    Gère l'affichage des marqueurs pour les joueurs inconscients, visibles uniquement par les médecins.
@@ -62,7 +63,7 @@ player addEventHandler ["FiredNear", {
 	
 	    Exemple d'utilisation :
 	    Ce script signale aux médecins la présence de joueurs inconscients.
- */
+
 private _unconsciousMarkers = [];
 
 while {
@@ -115,5 +116,6 @@ while {
 		} forEach allPlayers;
 	};
 };
-
+ */
+ 
 [] execVM "function\fnc_welcome.sqf";

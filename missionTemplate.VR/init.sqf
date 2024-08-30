@@ -11,13 +11,9 @@ _EndSplashScreen = {
 
 [] execVM "function\fnc_nvgAdeptus.sqf";
 
-[] execVM "function\fnc_rotate.sqf";
-
 [] execVM "function\fnc_rank.sqf";
 
 [] execVM "function\fnc_authTreatment.sqf";
-
-[] execVM "function\fnc_thermalDisable.sqf";
 
 [] execVM "function\fnc_fortify_ace.sqf";
 
