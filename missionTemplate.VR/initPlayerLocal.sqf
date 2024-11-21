@@ -26,6 +26,7 @@ fnc_hintDisplayTexts = {
 	hintSilent "";
 };
 
+/*
 player addEventHandler ["FiredNear", {
 	params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
 	if (!((vehicle player) == player)) exitWith {};
@@ -44,6 +45,7 @@ player addEventHandler ["FiredNear", {
 		};
 	};
 }];
+*/
 
 /*
 	    Gère l'affichage des marqueurs pour les joueurs inconscients, visibles uniquement par les médecins.
