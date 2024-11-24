@@ -1,6 +1,6 @@
 _player = _this select 0;
 _UID = getPlayerUID _player;
-_playerName = name _playerUnit;
+_playerName = name _player;
 
 if ( _player getVariable [ "reserved", false ] && {
 	!(_UID in allowed)
