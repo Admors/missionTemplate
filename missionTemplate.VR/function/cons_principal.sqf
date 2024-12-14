@@ -89,18 +89,14 @@ fnc_space = {
     
     if (isObjectHidden env_space) then {
         env_space hideObjectGlobal false;
-        SHIELD_HANGAR1_RIGHT hideObjectGlobal false;
-        SHIELD_HANGAR1_LEFT hideObjectGlobal false;
-        SHIELD_HANGAR2_RIGHT hideObjectGlobal false;
-        SHIELD_HANGAR2_LEFT hideObjectGlobal false;
+        SIMPLE_RIGHT_SHIELD hideObjectGlobal false;
+        SIMPLE_LEFT_SHIELD hideObjectGlobal false;
         false call fnc_energyshields;
         titleText ["<t align='center' shadow='2' color='#4c6ca8' size='1.2' font='RobotoCondensedBold'>Holo Coms</t><t color='#ffffff' size='1.2' font='RobotoCondensed'> : Purgatoire à équipage... Sortie de l'Atmosphère...</t>", "PLAIN DOWN", -1, true, true];
     } else {
         env_space hideObjectGlobal true;
-        SHIELD_HANGAR1_RIGHT hideObjectGlobal true;
-        SHIELD_HANGAR1_LEFT hideObjectGlobal true;
-        SHIELD_HANGAR2_RIGHT hideObjectGlobal true;
-        SHIELD_HANGAR2_LEFT hideObjectGlobal true;
+        SIMPLE_RIGHT_SHIELD hideObjectGlobal true;
+        SIMPLE_LEFT_SHIELD hideObjectGlobal true;
         true call fnc_energyshields;
         titleText ["<t align='center' shadow='2' color='#4c6ca8' size='1.2' font='RobotoCondensedBold'>Holo Coms</t><t color='#ffffff' size='1.2' font='RobotoCondensed'> : Purgatoire à équipage... Entrée dans l'Atmosphère...</t>", "PLAIN DOWN", -1, true, true];
 
