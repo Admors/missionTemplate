@@ -45,3 +45,12 @@ class CfgDebriefing {
     };
 };
 
+class CfgFunctions{
+    class AR{
+        class adeptus{
+            file="functions";
+            class arsenal{
+            };
+        };
+    };  
+};

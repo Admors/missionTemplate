@@ -118,4 +118,4 @@ player addEventHandler ["FiredNear", {
 	};
 */
 
-[] execVM "function\fnc_welcome.sqf";
+[] execVM "functions\fnc_welcome.sqf";

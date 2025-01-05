@@ -38,9 +38,9 @@ allowed = ["76561198063259158", "76561198134513977", "76561198218934540", "76561
 	_fileExist = "exists" call _inidbi;
 	if (_fileExist) then {
 		diag_log format ["[%1] Entry already exist, loading file data", _UID];
-		null = [_UID, _playerName, _playerUnit] execVM "function\fnc_loadDatabaseEntry.sqf";
+		null = [_UID, _playerName, _playerUnit] execVM "functions\fnc_loadDatabaseEntry.sqf";
 	} else {
 		diag_log format["[%1] Entry doesn't exist, creating file data", _UID];
-		null = [ _UID, _playerName, _playerUnit] execVM "function\fnc_createDataBaseEntry.sqf";
+		null = [ _UID, _playerName, _playerUnit] execVM "functions\fnc_createDataBaseEntry.sqf";
 	};
 };

@@ -56,16 +56,18 @@ ace_hearing_disableEarRinging = false;
 force ace_hearing_earplugsVolume = 0.5;
 force ace_hearing_enableCombatDeafness = true;
 force ace_hearing_enabledForZeusUnits = true;
+ace_hearing_explosionDeafnessCoefficient = 1;
 force ace_hearing_unconsciousnessVolume = 0.4;
 
 // ACE Auto-inflammation
 force ace_cookoff_ammoCookoffDuration = 1;
+ace_cookoff_cookoffDuration = 1;
 force ace_cookoff_destroyVehicleAfterCookoff = false;
-force ace_cookoff_enable = 2;
 force ace_cookoff_enableAmmobox = false;
 force ace_cookoff_enableAmmoCookoff = false;
 force ace_cookoff_enableFire = false;
 force ace_cookoff_probabilityCoef = 1;
+ace_cookoff_removeAmmoDuringCookoff = true;
 
 // ACE Balistique avancÃ©e
 force ace_advanced_ballistics_ammoTemperatureEnabled = true;
@@ -127,7 +129,6 @@ force ace_winddeflection_vehicleEnabled = true;
 // ACE DÃ©gÃ¢ts de vÃ©hicule avancÃ©s
 force ace_vehicle_damage_enableCarDamage = false;
 force ace_vehicle_damage_enabled = false;
-force ace_vehicle_damage_removeAmmoDuringCookoff = false;
 
 // ACE Douilles
 ace_casings_enabled = true;
@@ -188,11 +189,14 @@ ace_ai_assignNVG = false;
 
 // ACE Interaction
 force ace_interaction_disableNegativeRating = false;
+ace_interaction_enableAnimActions = true;
 force ace_interaction_enableGroupRenaming = true;
 ace_interaction_enableMagazinePassing = true;
 force ace_interaction_enableTeamManagement = true;
 ace_interaction_enableWeaponAttachments = true;
+ace_interaction_interactWithEnemyCrew = 0;
 force ace_interaction_interactWithTerrainObjects = false;
+ace_interaction_remoteTeamManagement = true;
 
 // ACE Interface Utilisateur
 force ace_ui_allowSelectiveUI = true;
@@ -244,7 +248,7 @@ ace_advanced_throwing_showThrowArc = true;
 // ACE Limiteur de visibilitÃ©
 force ace_viewdistance_enabled = true;
 force ace_viewdistance_limitViewDistance = 10000;
-force ace_viewdistance_objectViewDistanceCoeff = 0;
+ace_viewdistance_objectViewDistanceCoeff = 0;
 ace_viewdistance_viewDistanceAirVehicle = 0;
 ace_viewdistance_viewDistanceLandVehicle = 0;
 ace_viewdistance_viewDistanceOnFoot = 0;
@@ -262,6 +266,7 @@ ace_rearm_enabled = true;
 force ace_rearm_level = 0;
 force ace_rearm_supply = 0;
 ace_refuel_cargoRate = 10;
+ace_refuel_enabled = true;
 force ace_refuel_hoseLength = 12;
 force ace_refuel_progressDuration = 2;
 force ace_refuel_rate = 1;
@@ -278,6 +283,7 @@ force ace_scopes_deduceBarometricPressureFromTerrainAltitude = false;
 force ace_scopes_defaultZeroRange = 100;
 force ace_scopes_enabled = true;
 force ace_scopes_forceUseOfAdjustmentTurrets = false;
+ace_scopes_inScopeAdjustment = false;
 force ace_scopes_overwriteZeroRange = false;
 force ace_scopes_simplifiedZeroing = false;
 ace_scopes_useLegacyUI = false;
@@ -447,6 +453,8 @@ ace_fastroping_autoAddFRIES = false;
 force ace_fastroping_requireRopeItems = false;
 force ace_gunbag_swapGunbagEnabled = true;
 force ace_hitreactions_minDamageToTrigger = 0.1;
+ace_hitreactions_weaponDropChanceArmHitAI = 0;
+ace_hitreactions_weaponDropChanceArmHitPlayer = 0;
 ace_inventory_inventoryDisplaySize = 0;
 force ace_laser_dispersionCount = 2;
 force ace_laser_showLaserOnMap = 1;
@@ -455,7 +463,8 @@ force ace_microdagr_mapDataAvailable = 2;
 force ace_microdagr_waypointPrecision = 3;
 force ace_noradio_enabled = true;
 ace_optionsmenu_showNewsOnMainMenu = true;
-force ace_overpressure_distanceCoefficient = 1;
+ace_overpressure_backblastDistanceCoefficient = 1;
+ace_overpressure_overpressureDistanceCoefficient = 1;
 force ace_parachute_failureChance = 0;
 ace_parachute_hideAltimeter = true;
 ace_tagging_quickTag = 1;
@@ -563,10 +572,9 @@ force acex_sitting_enable = true;
 
 // ACE Simulation de la fragmentation
 force ace_frag_enabled = true;
-force ace_frag_maxTrack = 10;
-force ace_frag_maxTrackPerFrame = 10;
 force ace_frag_reflectionsEnabled = false;
 force ace_frag_spallEnabled = false;
+ace_frag_spallIntensity = 1;
 
 // ACE Spectateur
 force ace_spectator_enableAI = false;
@@ -575,6 +583,7 @@ force ace_spectator_restrictModes = 0;
 force ace_spectator_restrictVisions = 0;
 
 // ACE Suivi des morts
+ace_killtracker_showCrewKills = false;
 ace_killtracker_trackAI = true;
 
 // ACE Surchauffe
@@ -619,11 +628,11 @@ force ace_vehiclelock_lockVehicleInventory = false;
 force ace_vehiclelock_vehicleStartingLockState = -1;
 
 // ACE Vision Nocturne
-force ace_nightvision_aimDownSightsBlur = 0.3;
+force ace_nightvision_aimDownSightsBlur = 0.5;
 force ace_nightvision_disableNVGsWithSights = false;
 force ace_nightvision_effectScaling = 0.8;
 force ace_nightvision_fogScaling = 1;
-force ace_nightvision_noiseScaling = 0.3;
+force ace_nightvision_noiseScaling = 0.8;
 ace_nightvision_shutterEffects = true;
 
 // ACE Volume
@@ -640,10 +649,11 @@ force ace_zeus_canCreateZeus = 0;
 force ace_zeus_radioOrdnance = false;
 force ace_zeus_remoteWind = false;
 force ace_zeus_revealMines = 0;
-force ace_zeus_zeusAscension = true;
+force ace_zeus_zeusAscension = false;
 force ace_zeus_zeusBird = false;
 
 // Advanced Vault System
+AVS_EnableVoiceSounds = true;
 force AVS_Jump_MAINWEAP_X = "4";
 force AVS_Jump_MAINWEAP_Z = "1.7";
 force AVS_Jump_PIST_X = "6";
@@ -755,9 +765,11 @@ diwako_dui_namelist_text_shadow = 2;
 diwako_dui_namelist_width = 215;
 diwako_dui_radar_ace_finger = true;
 force diwako_dui_radar_ace_medic = true;
+diwako_dui_radar_always_show_unit_numbers = false;
 diwako_dui_radar_compassRangeCrew = 500;
 diwako_dui_radar_dir_padding = 25;
 diwako_dui_radar_dir_shadow = 2;
+diwako_dui_radar_enable_seat_icons = 2;
 diwako_dui_radar_group_by_vehicle = false;
 diwako_dui_radar_icon_opacity = 1;
 diwako_dui_radar_icon_opacity_no_player = true;
@@ -960,6 +972,7 @@ kat_airway_Suction_time = 12;
 kat_breathing_advPtxChance = 5;
 kat_breathing_advPtxEnable = false;
 kat_breathing_arrestPneumothorax_interval = 30;
+kat_breathing_availOxyMask = "'G_AirPurifyingRespirator_01_F'";
 kat_breathing_BVMOxygen_Multiplier = 1;
 kat_breathing_clearChestSealAfterTreatment = false;
 kat_breathing_deepPenetratingInjuryChance = 30;
@@ -967,7 +980,7 @@ kat_breathing_deterioratingPneumothorax_chance = 10;
 kat_breathing_deterioratingPneumothorax_interval = 60;
 force kat_breathing_enable = false;
 kat_breathing_enable_selfChestseal = 1;
-kat_breathing_enableSPO2Flashing = true;
+kat_breathing_enableCheckBreathing = true;
 kat_breathing_Etco2_Enabled = true;
 kat_breathing_Etco2_Units = 0;
 kat_breathing_HPTXBleedAmount = 0.06;
@@ -976,7 +989,6 @@ kat_breathing_inspectChest_enable = 2;
 kat_breathing_inspectChest_medLvl = 0;
 kat_breathing_inspectChest_time = 6;
 kat_breathing_locationProvideOxygen = 3;
-kat_breathing_lowSPO2Level = 90;
 kat_breathing_medLvl_BVM = 0;
 kat_breathing_medLvl_BVM_Oxygen = 0;
 kat_breathing_medLvl_Chestseal = 0;
@@ -986,6 +998,7 @@ kat_breathing_medLvl_PocketBVM = 0;
 kat_breathing_medLvl_Pulseoximeter = 0;
 kat_breathing_mildValue = 75;
 kat_breathing_NasalCannula_time = 3;
+kat_breathing_paco2Active = false;
 kat_breathing_PneumothoraxAlwaysVisible = false;
 kat_breathing_PneumothoraxArrest = true;
 kat_breathing_pneumothoraxChance = 5;
@@ -1013,12 +1026,15 @@ kat_breathing_stethoscopeSoundVolume = 2;
 kat_breathing_TensionHemothoraxAlwaysVisible = false;
 
 // KAT - ADV Medical: Chemical
-kat_chemical_affectAI = false;
 kat_chemical_availGasmask = "'G_AirPurifyingRespirator_01_F', 'kat_mask_M50', 'kat_mask_M04'";
 kat_chemical_gasmask_durability = 900;
+kat_chemical_gasMaskSoundVolume = 1;
 kat_chemical_infectionTime = 60;
+kat_chemical_showPoisoning = true;
+kat_chemical_tearGasDropChance = 0;
 
 // KAT - ADV Medical: Circulation
+kat_circulation_abgEnable = false;
 kat_circulation_AdvRhythm = true;
 kat_circulation_AdvRhythm_AED_ROSC_Chance = 50;
 kat_circulation_AdvRhythm_asystoleBloodlossThreshold = 3.6;
@@ -1073,9 +1089,16 @@ kat_circulation_medLvl_AED_X = 0;
 kat_circulation_tamponadeChance = 10;
 kat_circulation_useLocation_AED = 0;
 
+// KAT - ADV Medical: Feedback
+kat_feedback_effectLowSpO2 = 90;
+kat_feedback_enableOpioidEffect = true;
+
 // KAT - ADV Medical: GUI
 kat_gui_ColoredLogs = true;
 kat_gui_showPatientSideLabels = false;
+
+// KAT - ADV Medical: Hypothermia
+kat_hypothermia_hypothermiaActive = true;
 
 // KAT - ADV Medical: Misc
 kat_misc_AFAK_Container = 0;
@@ -1135,12 +1158,6 @@ kat_pharma_carbonateChance = 100;
 kat_pharma_CheckCoag_Location = 0;
 kat_pharma_CheckCoag_MedLevel = 0;
 kat_pharma_CheckCoag_TreatmentTime = 10;
-kat_pharma_chromatic_aberration_checkbox_fentanyl = true;
-kat_pharma_chromatic_aberration_checkbox_ketamine = true;
-kat_pharma_chromatic_aberration_checkbox_pervitin = true;
-kat_pharma_chromatic_aberration_slider_fentanyl = 1;
-kat_pharma_chromatic_aberration_slider_ketamine = 0.8;
-kat_pharma_chromatic_aberration_slider_pervitin = 1;
 kat_pharma_coagulation = false;
 kat_pharma_coagulation_allow_clot_text = true;
 kat_pharma_coagulation_allow_EACA_script = true;
@@ -1164,6 +1181,7 @@ kat_pharma_eacaClearTrauma = false;
 kat_pharma_ivCheckLimbDamage = false;
 kat_pharma_IVdrop = 600;
 kat_pharma_IVdropEnable = true;
+kat_pharma_IVflowControl = false;
 kat_pharma_IVreuse = false;
 kat_pharma_keepScriptRunning_EACA = true;
 kat_pharma_keepScriptRunning_TXA = true;
@@ -1230,7 +1248,6 @@ kat_surgery_closedTime = 10;
 kat_surgery_compoundChance = 30;
 kat_surgery_enable_fracture = true;
 kat_surgery_enable_selfCheckFracture = 1;
-kat_surgery_etomidateTime = 45;
 kat_surgery_fractureCheck_MedLevel = 0;
 kat_surgery_fractureCheck_Time = 10;
 kat_surgery_incisionTime = 10;
@@ -1252,6 +1269,15 @@ kat_surgery_surgicalLocation = 3;
 kat_surgery_ultrasound_MedLevel = 2;
 kat_surgery_ultrasoundLocation = 3;
 kat_surgery_ultrasoundTime = 8;
+
+// KAT - ADV Medical: Vitals
+kat_vitals_enableFluidShift = true;
+kat_vitals_enableSimpleMedical = false;
+
+// KAT - ADV Medical: Watch
+kat_watch_altitudeUnit = 0;
+kat_watch_pressureUnit = 0;
+kat_watch_temperatureUnit = 0;
 
 // LAMBS Danger
 force lambs_danger_cqbRange = 60;
@@ -1393,12 +1419,13 @@ force OPTRE_Enable_Humans_To_Detach = false;
 OPTRE_Enable_Player_Door_On_Gear_Pelican = true;
 force OPTRE_Enable_Supercombustion_dev = true;
 force OPTRE_Enable_Turret_Detach = true;
+OPTRE_Falcon_PIP_Position = "0,1";
 force OPTRE_Hijack_FriendlyFireEnabled = true;
 force OPTRE_Hijack_Mode = 2;
 force OPTRE_Human_Non_Detachable_Turrets = "";
 OPTRE_Jackal_Randomize = true;
 force OPTRE_Spartan_Non_Detachable_Turrets = "";
-force OPTRE_Spartan_Randomize = true;
+force OPTRE_Spartan_Randomize = false;
 
 // OPTRE:FC Settings
 OPTRE_Enable_AI_Door_On_Gear_Spirit = true;
@@ -1464,7 +1491,9 @@ force ScifiSupportPlus_JumpShipIn = true;
 force ScifiSupportPlus_JumpShipOut = true;
 ScifiSupportPlus_LAATc = true;
 force ScifiSupportPlus_MACStrike = true;
+force ScifiSupportPlus_MoveShip = true;
 ScifiSupportPlus_MoveShip_Speed = "0.001";
+ScifiSupportPlus_MunificentQRFDeployment = true;
 force ScifiSupportPlus_OrbitalAutocannon = true;
 force ScifiSupportPlus_OrbitalBlasterCannonBlue = true;
 force ScifiSupportPlus_OrbitalBlasterCannonBlueHE = true;
@@ -1477,8 +1506,11 @@ force ScifiSupportPlus_TurboLaserVolley = true;
 ScifiSupportPlus_UNSC_ArmedFrigate = true;
 force ScifiSupportPlus_UNSC_ConstructionPod = true;
 force ScifiSupportPlus_UNSC_OrbitalVehicleDeployment = true;
+ScifiSupportPlus_UNSC_SquadInsert = true;
 force ScifiSupportPlus_UNSC_sup_pod = true;
 force ScifiSupportPlus_UNSCHeavyInsertionPod = true;
+ScifiSupportPlus_WH40K_DaemonTeleporter = true;
+ScifiSupportPlus_WH40K_DaemonTeleporter_customUnit = """O_Soldier_F"",""B_Soldier_F""";
 force ScifiSupportPlusMissilebarrageAT = true;
 force ScifiSupportPlusMissilebarrageHE = true;
 
@@ -1502,9 +1534,22 @@ force WBK_HeadLamps_IsAIActivateHeadlamps = false;
 force WBK_HeadLamps_IsVolumetricAppearOnAIParam = false;
 
 // WebKnight's Zombies
-force WBK_ZombiesIsUseBitingAnimation = true;
-force WBK_ZombiesIsUseParticleDeathControl = true;
-force WBK_ZombiesIsUseStatDeathControl = false;
+WBK_Zommbies_Halth_Runner = "50";
+WBK_Zommbies_Halth_Shamb = "40";
+WBK_Zommbies_Halth_Trig = "30";
+WBK_Zommbies_Halth_Walker = "30";
+WBK_Zommbies_HeadshotMultiplier = "5";
+WBK_Zommbies_HowFarCanSee = "150";
+WBK_Zommbies_HowFarCanSee_Goliath = "600";
+WBK_Zommbies_HowFarCanSee_SI = "300";
+WBK_Zommbies_HowFarCanSee_Smash = "500";
+WBK_Zommbies_PathingDebug = false;
+WBK_Zommbies_PathingPositionChange = "8";
+WBK_ZommbiesBloaterHealthParam = "80";
+WBK_ZommbiesCorruptedHealthParam = "200";
+WBK_ZommbiesCorruptedTakeMusicParam = true;
+WBK_ZommbiesCorruptedTakeParam = true;
+WBK_ZommbiesCorruptedTakeTimeParam = "40";
 WBK_ZommbiesGoliathHealthParam = "15000";
 WBK_ZommbiesGoliathPickupAttackParam = true;
 WBK_ZommbiesGoliathThrowParam = true;
@@ -1514,9 +1559,18 @@ WBK_ZommbiesGoliathUndergroundAttackParam_distance = "50";
 WBK_ZommbiesGoliathUndergroundAttackParam_max = "10";
 force WBK_ZommbiesLeaperHealthParam = "120";
 force WBK_ZommbiesMeleeHealthParam = "100";
+WBK_ZommbiesScreamerCoolParam = "20";
+WBK_ZommbiesScreamerDistParam = "100";
+WBK_ZommbiesScreamerHealthParam = "160";
 force WBK_ZommbiesSmasherHealthParam = "3500";
+WBK_ZommbiesSmasherHealthParam_Acid = "4000";
+WBK_ZommbiesSmasherHealthParam_Hell = "5000";
 force WBK_ZommbiesSmasherJumpParam = true;
 force WBK_ZommbiesSmasherThrowParam = true;
+WBK_ZommbiesSmasherThrowParam_Deb = "45";
+WBK_ZommbiesSmasherThrowParam_Deb_Fire = "15";
+WBK_ZommbiesSmasherThrowParam_Deb_Spewer = "20";
+WBK_ZommbiesSmasherThrowParam_Deb_TP = "40";
 
 // Zeus Enhanced
 force zen_area_markers_editableMarkers = 0;
@@ -1529,7 +1583,7 @@ force zen_common_ascensionMessages = false;
 force zen_common_autoAddObjects = true;
 force zen_common_cameraBird = false;
 zen_common_darkMode = false;
-zen_common_disableGearAnim = false;
+force zen_common_disableGearAnim = true;
 zen_common_preferredArsenal = 1;
 zen_compat_ace_hideModules = true;
 zen_context_menu_enabled = 2;
@@ -1544,7 +1598,7 @@ zen_editor_previews_enabled = true;
 zen_editor_randomizeCopyPaste = false;
 zen_editor_removeWatermark = true;
 zen_editor_unitRadioMessages = 0;
-zen_placement_enabled = false;
+force zen_placement_enabled = true;
 zen_remote_control_cameraExitPosition = 2;
 zen_visibility_enabled = 0;
 zen_visibility_maxDistance = 5000;

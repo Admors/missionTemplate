@@ -9,16 +9,14 @@ _EndSplashScreen = {
 
 [] spawn _EndSplashScreen;
 
-[] execVM "function\fnc_nvgAdeptus.sqf";
+[] execVM "functions\fnc_nvgAdeptus.sqf";
 
-[] execVM "function\fnc_rank.sqf";
+[] execVM "functions\fnc_rank.sqf";
 
-[] execVM "function\fnc_authTreatment.sqf";
+[] execVM "functions\fnc_authTreatment.sqf";
 
-[] execVM "function\fnc_fortify_ace.sqf";
+[] execVM "functions\fnc_fortify_ace.sqf";
 
-[] execVM "function\fnc_load_equipement.sqf";
+[] execVM "functions\fnc_load_equipement.sqf";
 
-[] execVM "function\fnc_authAttribution.sqf";
-
-[] execVM "function\fnc_teleport.sqf";
+[] execVM "functions\fnc_authAttribution.sqf";
