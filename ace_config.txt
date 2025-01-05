@@ -51,11 +51,11 @@ force ace_mk6mortar_allowComputerRangefinder = true;
 force ace_mk6mortar_useAmmoHandling = false;
 
 // ACE Audition
-ace_hearing_autoAddEarplugsToUnits = 1;
+force ace_hearing_autoAddEarplugsToUnits = 2;
 ace_hearing_disableEarRinging = false;
 force ace_hearing_earplugsVolume = 0.5;
-force ace_hearing_enableCombatDeafness = true;
-force ace_hearing_enabledForZeusUnits = true;
+force ace_hearing_enableCombatDeafness = false;
+force ace_hearing_enabledForZeusUnits = false;
 ace_hearing_explosionDeafnessCoefficient = 1;
 force ace_hearing_unconsciousnessVolume = 0.4;
 
