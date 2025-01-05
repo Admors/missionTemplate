@@ -61,13 +61,13 @@ force ace_hearing_unconsciousnessVolume = 0.4;
 
 // ACE Auto-inflammation
 force ace_cookoff_ammoCookoffDuration = 1;
-ace_cookoff_cookoffDuration = 1;
+force ace_cookoff_cookoffDuration = 1;
 force ace_cookoff_destroyVehicleAfterCookoff = false;
 force ace_cookoff_enableAmmobox = false;
 force ace_cookoff_enableAmmoCookoff = false;
 force ace_cookoff_enableFire = false;
 force ace_cookoff_probabilityCoef = 1;
-ace_cookoff_removeAmmoDuringCookoff = true;
+force ace_cookoff_removeAmmoDuringCookoff = false;
 
 // ACE Balistique avancÃ©e
 force ace_advanced_ballistics_ammoTemperatureEnabled = true;
