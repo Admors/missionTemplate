@@ -49,8 +49,9 @@ class CfgFunctions{
     class AR{
         class adeptus{
             file="functions";
-            class arsenal{
-            };
+            class arsenal{};
+            class sit{};
+            class logisticTerminal{};
         };
     };  
 };
