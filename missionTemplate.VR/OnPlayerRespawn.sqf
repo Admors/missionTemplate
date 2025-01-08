@@ -1,1 +1,1 @@
-[] execVM "function\fnc_respawnAnimation.sqf";
+[] execVM "functions\fnc_respawnAnimation.sqf";
