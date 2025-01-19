@@ -5,7 +5,8 @@ _playerName = name _player;
 if ( _player getVariable [ "reserved", false ] && {
 	!(_UID in allowed)
 } ) then {
-	[ [], "fnc_reservedSlot", _player ] call BIS_fnc_MP;
+	// [ [], "fnc_reservedSlot", _player ] call BIS_fnc_MP;// This function has been replaced by remoteExec. while BIS_fnc_MP still works (to provide backwards compatibility), it is now deprecated and should no longer be used.
+	[] remoteExec [ "BIS_fnc_endMission", _player ];
 };
 
 checkForDatabase = [_UID, _playerName, _player];
