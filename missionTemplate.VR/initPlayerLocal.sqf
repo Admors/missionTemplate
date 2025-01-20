@@ -35,7 +35,7 @@ fnc_hintDisplayTexts = {
 	
 	Parameters:
 	_unit - Object: The unit that is under fire.
-	_combatTime - Scalar (Optional): The duration of the combat state in seconds. default is 60 seconds.
+	_combatTime - Number (Optional): The duration of the combat state in seconds. default is 60 seconds.
 	
 	Usage:
 	[_unit, _combatTime] call fn_UnderFire;
@@ -46,7 +46,7 @@ fnc_hintDisplayTexts = {
 	- The combat timer decreases over time and resets to 0 when the combat state ends.
  */
 fn_UnderFire = {
-	params ["_unit", ["_combatTime", 60, ["SCALAR"]]];
+	params ["_unit", ["_combatTime", 60, [0]]];
 	if ((isRemoteControlling _unit) || ((vehicle _unit) != _unit)) exitWith {};
 
 	if ((_unit getVariable ["combatTime", 0]) == 0) then {
