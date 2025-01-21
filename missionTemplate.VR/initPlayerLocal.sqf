@@ -6,21 +6,25 @@ fnc_reservedSlot = {
 	sleep 0.01;
 	endMission "NOT_ALLOWED";
 };
+
 /*
-	Affiche un indice à l'écran pendant un certain laps de temps.
+	Function: fnc_hintDisplayTexts
 	
-	Cette fonction prend une chaîne de caractères et une durée en secondes en tant que paramètres.
-	Elle affiche l'indice silencieusement à l'écran pendant la durée spécifiée, puis le retire.
+	Description:
+	Displays a hint message for a specified duration.
 	
 	Parameters:
-	_string (string): La chaîne de caractères à afficher en tant qu'indice.
-	_time (number): La durée en secondes pendant laquelle l'indice est affiché.
+	_string - (String) The text to be displayed as a hint. default is an empty string.
+	_time - (Number) The duration in seconds for which the hint will be displayed. default is 5 seconds.
 	
-	Exemple d'utilisation:
-    fnc_hintDisplayTexts "Ceci est un message d'indice." 5;  // Affiche "Ceci est un message d'indice." pendant 5 secondes
+	Example:
+	 [
+	  "<t color='#FF0000'>This is a red hint!</t>", // hint text with color formatting
+	  10 // Display duration in seconds
+	 ] call fnc_hintDisplayTexts;
 */
 fnc_hintDisplayTexts = {
-	params["_string", "_time"];
+	params[["_string", "", ["STRING"]], ["_time", 5, [0]]];
 	hintSilent parseText _string;
 	sleep _time;
 	hintSilent "";
