@@ -1,22 +1,11 @@
 medicUnit switchMove "UnconsciousReviveArms";
 
-_EndSplashScreen = {
-	for "_x" from 1 to 4 do {
-		endLoadingScreen;
-		sleep 3;
-	};
-};
+[player] call AR_fnc_nvg
 
-[] spawn _EndSplashScreen;
+[player] call AR_fnc_rank
 
-[] execVM "functions\fnc_nvgAdeptus.sqf";
-
-[] execVM "functions\fnc_rank.sqf";
-
-[] execVM "functions\fnc_authTreatment.sqf";
-
-[] execVM "functions\fnc_fortify_ace.sqf";
+[] call AR_fnc_fortifyAce
 
 [] execVM "functions\fnc_load_equipement.sqf";
 
-[] execVM "functions\fnc_authAttribution.sqf";
+[player] call AR_fnc_authAttribution;
