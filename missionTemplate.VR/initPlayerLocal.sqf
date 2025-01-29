@@ -1,3 +1,5 @@
+params ["_player", "_didJIP"];
+
 player setUnitLoadout (player getVariable ["Saved_Loadout", []]);
 
 fnc_reservedSlot = {
