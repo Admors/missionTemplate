@@ -81,4 +81,4 @@ player addEventHandler ["FiredNear", {
 	[_unit] spawn fn_UnderFire;
 }];
 
-[] execVM "functions\fnc_welcome.sqf";
+[_player] call AR_fnc_welcome;
