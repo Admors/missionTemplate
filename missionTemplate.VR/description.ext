@@ -1,6 +1,3 @@
-#include "dialogs\medicalMenu\defines.hpp"
-#include "dialogs\medicalMenu\controls.hpp"
-
 class Header
 {
     gameType = Coop;
