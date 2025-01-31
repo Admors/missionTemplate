@@ -1,5 +1,3 @@
-allowed = ["76561198063259158", "76561198134513977", "76561198218934540", "76561198127318244", "76561198308368404", "76561198272941463", "76561198254448634", "76561198063711746"];
-
 /*
 	Gère l'événement de vérification d'entrée dans une base de données INIDBI.
 	
@@ -44,5 +42,3 @@ allowed = ["76561198063259158", "76561198134513977", "76561198218934540", "76561
 		null = [ _UID, _playerName, _playerUnit] execVM "functions\fnc_createDataBaseEntry.sqf";
 	};
 };
-
-[] call AR_fnc_unconsciousPlayerTasks;

@@ -2,10 +2,10 @@ medicUnit switchMove "UnconsciousReviveArms";
 
 [] call AR_fnc_init;
 
-[player] call AR_fnc_nvg;
+if (hasInterface) then {
+	[player, 60] call AR_fnc_underFire;
+};
 
-[player] call AR_fnc_rank;
-
-[] call AR_fnc_fortifyAce;
-
-[player] call AR_fnc_authAttribution;
+if (isServer) then {
+	[] call AR_fnc_unconsciousPlayerTasks;
+};
