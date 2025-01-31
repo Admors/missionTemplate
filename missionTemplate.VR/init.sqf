@@ -1,5 +1,3 @@
-medicUnit switchMove "UnconsciousReviveArms";
-
 [] call AR_fnc_init;
 
 if (hasInterface) then {
