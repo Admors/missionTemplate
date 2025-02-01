@@ -1,11 +1,3 @@
-_player = _this select 0;
-_UID = getPlayerUID _player;
-_playerName = name _player;
-
-checkForDatabase = [_UID, _playerName, _player];
-
-publicVariableServer "checkForDatabase";
-
 addMissionEventHandler ["HandleDisconnect", {
 	params ["_unit", "_id", "_uid", "_name"];
 	_inidbi = ["new", _UID] call OO_INIDBI;

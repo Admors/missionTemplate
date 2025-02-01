@@ -51,3 +51,5 @@ class CfgDebriefing
 AR_ComsList[] = {{"Convocation CO/NCO", "Les Officiers et Sous-Officiers sont demandées sur le pont Principal"}};
 
 #include "CfgAdeptus.hpp"
+
+#include "Functions\CfgFunctions.hpp"
