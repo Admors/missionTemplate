@@ -65,7 +65,7 @@ fn_UnderFire = {
 					["<t size='2.0' color='#FF0000'><img image='a3\ui_f_curator\data\rsccommon\rscattributebehaviour\combat_ca.paa'/></t><br/><br/>Vous êtes en combat !", 5] spawn fnc_hintDisplayTexts;
 					_unit switchCamera "Internal";
 				};
-				if ((vehicle _unit) != _unit) exitWith {};
+				if (((vehicle _unit) != _unit) || !(alive _unit)) exitWith {};
 				_unit setVariable ["combatTime", (_unit getVariable ["combatTime", 0]) - 0.2, true];
 			};
 			_unit setVariable ["combatTime", 0, true];
