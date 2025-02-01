@@ -2,12 +2,6 @@ _player = _this select 0;
 _UID = getPlayerUID _player;
 _playerName = name _player;
 
-if ( _player getVariable [ "reserved", false ] && {
-	!(_UID in allowed)
-} ) then {
-	[] remoteExec [ "BIS_fnc_endMission", _player ];
-};
-
 checkForDatabase = [_UID, _playerName, _player];
 
 publicVariableServer "checkForDatabase";
