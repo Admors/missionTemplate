@@ -31,22 +31,24 @@ fnc_hintDisplayTexts = {
 };
 
 /*
-	Function: AR_fnc_underFire
-	Auteur: Adeptus TEAM (adeptusrepublica.fr)
-	Publique: Non
+	Function: fn_UnderFire
 	
-	Description: Gère la vue de la caméra d'une unité lorsqu'elle est sous le feu.
+	Description:
+	This function handles the behavior of a unit when it is under fire.
+	It sets a combat timer and switches the camera view to internal if the unit is in external view.
 	
-	Arguments:
-	0: _unit <Unit> - Unité regarder.
-	1: _combatTime <Number> (default: 60) - Durée du combat en secondes.
+	Parameters:
+	_unit - Object: The unit that is under fire.
+	_combatTime - Number (Optional): The duration of the combat state in seconds. default is 60 seconds.
 	
-	Retourne:
-	None
+	Usage:
+	[_unit, _combatTime] call fn_UnderFire;
 	
-	Exemple:
-	[_unit, _combatTime] call AR_fnc_underFire;
-*/
+	Notes:
+	- The function exits if the unit is remote controlled or if the unit is inside a vehicle.
+	- The function displays a hint message when the unit is in combat and switches the camera view to internal.
+	- The combat timer decreases over time and resets to 0 when the combat state ends.
+ */
 fn_UnderFire = {
 	params ["_unit", ["_combatTime", 60, [0]]];
 
