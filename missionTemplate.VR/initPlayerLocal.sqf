@@ -31,54 +31,60 @@ fnc_hintDisplayTexts = {
 };
 
 /*
-	Function: fn_UnderFire
+	Function: AR_fnc_underFire
+	Auteur: Adeptus TEAM (adeptusrepublica.fr)
+	Publique: Non
 	
-	Description:
-	This function handles the behavior of a unit when it is under fire.
-	It sets a combat timer and switches the camera view to internal if the unit is in external view.
+	Description: Gère la vue de la caméra d'une unité lorsqu'elle est sous le feu.
 	
-	Parameters:
-	_unit - Object: The unit that is under fire.
-	_combatTime - Number (Optional): The duration of the combat state in seconds. default is 60 seconds.
+	Arguments:
+	0: _unit <Unit> - Unité regarder.
+	1: _combatTime <Number> (default: 60) - Durée du combat en secondes.
 	
-	Usage:
-	[_unit, _combatTime] call fn_UnderFire;
+	Retourne:
+	None
 	
-	Notes:
-	- The function exits if the unit is remote controlled or if the unit is inside a vehicle.
-	- The function displays a hint message when the unit is in combat and switches the camera view to internal.
-	- The combat timer decreases over time and resets to 0 when the combat state ends.
- */
+	Exemple:
+	[_unit, _combatTime] call AR_fnc_underFire;
+*/
 fn_UnderFire = {
 	params ["_unit", ["_combatTime", 60, [0]]];
-	if ((isRemoteControlling _unit) || ((vehicle _unit) != _unit)) exitWith {};
 
-	if ((_unit getVariable ["combatTime", 0]) == 0) then {
-		_unit setVariable ["combatTime", _combatTime, true];
-		[_unit] spawn {
-			params ["_unit"];
-			while {
-				uiSleep 0.2;
-				(_unit getVariable ["combatTime", 0]) > 0
-			} do {
-				if ((cameraView == "External") && ((vehicle _unit) == _unit)) then {
-					["<t size='2.0' color='#FF0000'><img image='a3\ui_f_curator\data\rsccommon\rscattributebehaviour\combat_ca.paa'/></t><br/><br/>Vous êtes en combat !", 5] spawn fnc_hintDisplayTexts;
-					_unit switchCamera "Internal";
+	AR_CombatTime = _combatTime;
+	publicVariable "AR_CombatTime";
+
+	_unit addEventHandler ["FiredNear", {
+		params ["_unit"];
+
+		if ((isRemoteControlling _unit) || ((vehicle _unit) != _unit) || !(alive _unit) || !(isPlayer _unit)) exitWith {};
+
+		if ((_unit getVariable ["combatTime", 0]) == 0) then {
+			_unit setVariable ["combatTime", AR_CombatTime, true];
+			[_unit] spawn {
+				params ["_unit"];
+				while {
+					uiSleep 0.2;
+					(_unit getVariable ["combatTime", 0]) > 0
+				} do {
+					if ((cameraView == "External") && ((vehicle _unit) == _unit) && (isPlayer _unit) && (alive _unit)) then {
+						["<t size='2.0' color='#FF0000'><img image='a3\ui_f_curator\data\rsccommon\rscattributebehaviour\combat_ca.paa'/></t><br/><br/>Vous êtes en combat !", 5] call fnc_hintDisplayTexts;
+						_unit switchCamera "Internal";
+					};
+					if ((isRemoteControlling _unit) || ((vehicle _unit) != _unit) || !(alive _unit) || !(isPlayer _unit)) exitWith {
+						_unit setVariable ["combatTime", 0, true];
+					};
+					_unit setVariable ["combatTime", (_unit getVariable ["combatTime", 0]) - 0.2, true];
 				};
-				if ((vehicle _unit) != _unit) exitWith {};
-				_unit setVariable ["combatTime", (_unit getVariable ["combatTime", 0]) - 0.2, true];
+				_unit setVariable ["combatTime", 0, true];
+				["<t size='2.0' color='#00FF00'><img image='a3\ui_f_curator\data\rsccommon\rscattributebehaviour\safe_ca.paa'/></t> ", 5] call fnc_hintDisplayTexts;
 			};
-			_unit setVariable ["combatTime", 0, true];
-			["<t size='2.0' color='#00FF00'><img image='a3\ui_f_curator\data\rsccommon\rscattributebehaviour\safe_ca.paa'/></t> ", 5] spawn fnc_hintDisplayTexts;
+		} else {
+			_unit setVariable ["combatTime", AR_CombatTime, true];
 		};
-	} else {
-		_unit setVariable ["combatTime", _combatTime, true];
 	};
+];
 };
 
-player addEventHandler ["FiredNear", {
-	params ["_unit"];
-	[_unit] spawn fn_UnderFire;
-}];
+[player, 60] spawn fn_UnderFire;
 
 [] execVM "functions\fnc_welcome.sqf";
