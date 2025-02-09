@@ -1,5 +1,3 @@
-#include "\adeptus_core\defines.hpp"
-
 class CfgFunctions
 {
     class Adeptus_DataBase
@@ -8,11 +6,21 @@ class CfgFunctions
         class Database
         {
             /* Script DB */
-            F(create)
-            F(handle)
-            F(init)
-            F(load)
-            F(saveOnDisconnect)
+            class create
+            {
+            };
+            class handle
+            {
+            };
+            class init
+            {
+            };
+            class load
+            {
+            };
+            class saveOnDisconnect
+            {
+            };
         };
     };
     class Adeptus
@@ -27,6 +35,10 @@ class CfgFunctions
     };
 };
 
+#define ANYONE 0
+#define CLIENT 1
+#define SERVER 2
+
 class CfgRemoteExec
 {
     class Functions
@@ -37,12 +49,27 @@ class CfgRemoteExec
         /* Client only functions */
 
         /* Server only functions */
-        RemoteExec(ARDB_fnc_create, SERVER)
-        RemoteExec(ARDB_fnc_load, SERVER)
-        RemoteExec(ARDB_fnc_saveOnDisconnect, SERVER)
-        RemoteExec(ARDB_fnc_handle, SERVER)
-        
+        class ARDB_fnc_create
+        {
+            allowedTargets = SERVER;
+        };
+        class ARDB_fnc_handle
+        {
+            allowedTargets = SERVER;
+        };
+        class ARDB_fnc_load
+        {
+            allowedTargets = SERVER;
+        };
+        class ARDB_fnc_saveOnDisconnect
+        {
+            allowedTargets = SERVER;
+        };
+
         /* Functions for everyone */
-        RemoteExec(ARDB_fnc_init, ANYONE)
+        class ARDB_fnc_init
+        {
+            allowedTargets = ANYONE;
+        };
     };
 };
