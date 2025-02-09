@@ -1,5 +1,5 @@
 if (!(missionNamespace getVariable ["DB_Error", false])) then {
-	if (isDedicated) && (!(missionNamespace getVariable ["DB_initialized", false])) then {
+	if ((isDedicated) && (!(missionNamespace getVariable ["DB_initialized", false]))) then {
 		missionNamespace setVariable ["DB_initialized", true, true];
 		[] call ARDB_fnc_handle;
 		[] call ARDB_fnc_saveOnDisconnect;

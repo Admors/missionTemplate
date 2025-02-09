@@ -37,12 +37,12 @@ class CfgRemoteExec
         /* Client only functions */
 
         /* Server only functions */
-        RemoteExec(AR_fnc_create, SERVER)
-        RemoteExec(AR_fnc_load, SERVER)
-        RemoteExec(AR_fnc_saveOnDisconnect, SERVER)
-        RemoteExec(AR_fnc_handle, SERVER)
+        RemoteExec(ARDB_fnc_create, SERVER)
+        RemoteExec(ARDB_fnc_load, SERVER)
+        RemoteExec(ARDB_fnc_saveOnDisconnect, SERVER)
+        RemoteExec(ARDB_fnc_handle, SERVER)
         
         /* Functions for everyone */
-        RemoteExec(AR_fnc_init, ANYONE)
+        RemoteExec(ARDB_fnc_init, ANYONE)
     };
 };
