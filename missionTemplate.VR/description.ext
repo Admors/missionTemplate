@@ -49,6 +49,7 @@ class CfgDebriefing
 };
 
 AR_ComsList[] = {{"Convocation CO/NCO", "Les Officiers et Sous-Officiers sont demandées sur le pont Principal"}};
+AR_Phase = 1; // 0 = Phase 1 | 1 = Phase 2
 
 #include "CfgAdeptus.hpp"
 
