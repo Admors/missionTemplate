@@ -1,6 +1,4 @@
-_UID = (_this select 0);
-_playerName = (_this select 1);
-_playerUnit = (_this select 2);
+params ["_UID", "_playerName", "_playerUnit"];
 
 _inidbi = ["new", _UID] call OO_INIDBI;
 

@@ -1,22 +1,13 @@
-medicUnit switchMove "UnconsciousReviveArms";
+// Init des fonction de base
+[] call AR_fnc_init;
 
-_EndSplashScreen = {
-	for "_x" from 1 to 4 do {
-		endLoadingScreen;
-		sleep 3;
-	};
+// Init des fonction de DataBase
+[] call ARDB_fnc_init;
+
+if (hasInterface) then {
+	[player, 60] call AR_fnc_underFire;
 };
 
-[] spawn _EndSplashScreen;
-
-[] execVM "functions\fnc_nvgAdeptus.sqf";
-
-[] execVM "functions\fnc_rank.sqf";
-
-[] execVM "functions\fnc_authTreatment.sqf";
-
-[] execVM "functions\fnc_fortify_ace.sqf";
-
-[] execVM "functions\fnc_load_equipement.sqf";
-
-[] execVM "functions\fnc_authAttribution.sqf";
+if (isServer) then {
+	[] call AR_fnc_unconsciousPlayerTasks;
+};
