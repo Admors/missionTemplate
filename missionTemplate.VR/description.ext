@@ -1,57 +1,12 @@
-class Header
-{
-    gameType = Coop;
-    minPlayers = 1;
-    maxPlayers = 32;
-};
-
-disabledAI = 1;
-joinUnassigned = 1;
-disableChannels[] = {{0, false, true}, {1, false, true}, {2, false, true}, {3, false, true}, {4, true, true}, {5, false, true}, {6, true, true}};
-enableDebugConsole = 1;
-showGPS = 1;
-showCompass = 1;
-showWatch = 1;
-showGroupIndicator = 0;
-showCompassshoQuadRadar = 0;
-allowProfileGlasses = 0;
-
-wreckLimit = 15;
-
 author = "61St Adeptus Team";
 onLoadName = "Main Server";
 onLoadMission = "Vous êtes un Clone Trooper à la solde de la Grande Armée de la République.";
 loadScreen = "\adeptus_core\data\loadscreen_co.paa"; // loadScreen représente le chemin d'accès à une image pour le chargement.
 
-respawn = 3;
-respawnDelay = 5;
-respawnDialog = 0;
-respawnOnStart = -1;
-respawnButton = 1;
-
-class CfgDebriefing
-{
-    class NOT_ALLOWED
-    {
-        title = "Ce Slot est réservé.";
-        description = "Vous n'êtes pas autorisé à occuper ce poste";
-    };
-
-    class Teamspeak
-    {
-        title = "Veuillez vous connecter au teamspeak !";
-        subTitle = "";
-        description = "Pour pouvoir rejoindre le serveur, vous devez être dans le canal TaskForce Radio.";
-        pictureBackground = "";
-        picture = "";
-        pictureColor[] = {0, 0.3, 0.6, 1};
-    };
-};
-
 AR_ComsList[] = {{"Convocation CO/NCO", "Les Officiers et Sous-Officiers sont demandées sur le pont Principal"}};
 AR_Phase = 1; // 0 = Phase 1 | 1 = Phase 2
 
-AR_ZeusAllowed[] = {"76561198113173701","76561198063259158", "76561198134513977", "76561198218934540", "76561198127318244", "76561198308368404", "76561198272941463", "76561198254448634", "76561198063711746"};
+AR_ZeusAllowed[] = {"76561198113173701", "76561198063259158", "76561198134513977", "76561198218934540", "76561198127318244", "76561198308368404", "76561198272941463", "76561198254448634", "76561198063711746"};
 
 AR_Ranks_CORPORAL[] = {"76561198007972617", "76561198195563307", "76561198254448634"};
 AR_Ranks_SERGEANT[] = {"76561198218934540", "76561198272941463"};
@@ -60,8 +15,10 @@ AR_Ranks_CAPTAIN[] = {"76561198134513977"};
 AR_Ranks_MAJOR[] = {"76561198063259158"};
 AR_Ranks_COLONEL[] = {};
 
-AR_Role_Medecin[] = {"76561198113173701","76561198218934540", "76561198007972617", "76561198272941463", "76561198241719492", "76561198068887307"};
+AR_Role_Medecin[] = {"76561198113173701", "76561198218934540", "76561198007972617", "76561198272941463", "76561198241719492", "76561198068887307"};
 AR_Role_Ingenieur[] = {"76561198063259158", "76561198134513977", "76561198254448634", "76561198148617439"};
 AR_Role_EOD[] = {"76561198063259158", "76561198134513977", "76561198254448634", "76561198148617439"};
+
+#include "\adeptus_core\mission\defaultParams.hpp"
 
 #include "Functions\CfgFunctions.hpp"
