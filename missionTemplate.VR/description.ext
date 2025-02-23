@@ -53,7 +53,7 @@ AR_Phase = 1; // 0 = Phase 1 | 1 = Phase 2
 
 AR_TerrestrialVehicles[] = {"A_MRAP_01_F_V1","A_I_APC_Wheeled_03_cannon_F","3AS_ATTE_Base","3AS_Barc","3AS_BarcSideCar","3AS_Saber_M1","3AS_Saber_M1G","3AS_Saber_Super"};
 AR_TransportAerialVehicles[] = {"A_LAAT_Mk1_V1","A_LAAT_Mk1_Lights_V1","A_LAAT_Mk2_V1","A_LAAT_Mk2_Lights_V1","3AS_LAATC","3AS_Nu_REP_F"};
-AR_AttackAerialVehicles[] = {""};
+AR_AttackAerialVehicles[] = {"3AS_ARC_170_Yellow","3AS_Z95_Yellow","3AS_BTLB_Bomber_ShadowLeader"};
 AR_SupplyCrate[] = {"Adeptus_Ammo_basic","Adeptus_Grenade_basic","Adeptus_Medical_basic","Adeptus_Lanceurs_basic"};
 
 
