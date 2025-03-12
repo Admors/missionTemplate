@@ -17,14 +17,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2956;
+		nextID=3001;
 	};
 	class Camera
 	{
-		pos[]={810.4104,121.47436,4316.3286};
-		dir[]={-0.031799186,-0.2472602,-0.96848053};
-		up[]={-0.0081166364,0.96893203,-0.24718449};
-		aside[]={-0.99950624,-1.6283011e-06,0.032818768};
+		pos[]={760.32031,123.56158,4277.4736};
+		dir[]={0.9085837,-0.19173913,0.37109676};
+		up[]={0.17750439,0.98144561,0.072498955};
+		aside[]={0.3781122,2.5465852e-09,-0.92576039};
 	};
 };
 binarizationWanted=0;
@@ -705,19 +705,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ENH_dynamicGroups";
-			expression="                if (!is3DEN && isMultiplayer && _value) then                {                    if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};                    if (hasInterface) then                    {                        0 spawn                        {                            scriptName 'ENH_Attribute_DynamicGroups';                            waitUntil {!isNull player};                            ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;                        };                    };                };            ";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -737,6 +724,19 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="ENH_dynamicGroups";
+			expression="                if (!is3DEN && isMultiplayer && _value) then                {                    if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};                    if (hasInterface) then                    {                        0 spawn                        {                            scriptName 'ENH_Attribute_DynamicGroups';                            waitUntil {!isNull player};                            ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;                        };                    };                };            ";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
 				};
 			};
 		};
@@ -36048,14 +36048,14 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={828.75061,121.64648,4313.5034};
+										position[]={828.75098,121.64644,4313.5039};
 										angles[]={0,3.1415927,0};
 									};
 									side="West";
 									flags=3;
 									class Attributes
 									{
-										init="private _helmet = """";" \n "_helmet = (([""SWLB_CEE_CG_Trooper_Helmet"",""SWLB_clone_CGTrooper_helmet""]) select (getMissionConfigValue [""AR_Phase"",1]));" \n "this addHeadgear _helmet;" \n "";
+										init="[this, stan] call BIS_fnc_attachToRelative;" \n "private _helmet = """";" \n "_helmet = (([""SWLB_CEE_CG_Trooper_Helmet"",""SWLB_clone_CGTrooper_helmet""]) select (getMissionConfigValue [""AR_Phase"",1]));" \n "this addHeadgear _helmet;" \n "";
 										disableSimulation=1;
 										ignoreByDynSimulGrid=1;
 										class Inventory
@@ -36124,7 +36124,7 @@ class Mission
 									};
 									id=4022;
 									type="3as_Clone_P1";
-									atlOffset=116.64503;
+									atlOffset=116.645;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -36241,7 +36241,7 @@ class Mission
 							{
 							};
 							id=4021;
-							atlOffset=116.64503;
+							atlOffset=116.645;
 						};
 						class Item127
 						{
@@ -36255,14 +36255,14 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={824.81213,121.64648,4313.5073};
+										position[]={824.81201,121.64644,4313.5078};
 										angles[]={0,3.1415927,0};
 									};
 									side="West";
 									flags=3;
 									class Attributes
 									{
-										init="private _helmet = """";" \n "_helmet = (([""SWLB_CEE_CG_Trooper_Helmet"",""SWLB_clone_CGTrooper_helmet""]) select (getMissionConfigValue [""AR_Phase"",1]));" \n "this addHeadgear _helmet;" \n "";
+										init="[this, stan] call BIS_fnc_attachToRelative;" \n "private _helmet = """";" \n "_helmet = (([""SWLB_CEE_CG_Trooper_Helmet"",""SWLB_clone_CGTrooper_helmet""]) select (getMissionConfigValue [""AR_Phase"",1]));" \n "this addHeadgear _helmet;" \n "";
 										disableSimulation=1;
 										ignoreByDynSimulGrid=1;
 										class Inventory
@@ -36331,7 +36331,7 @@ class Mission
 									};
 									id=4024;
 									type="3as_Clone_P1";
-									atlOffset=116.64503;
+									atlOffset=116.645;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -36448,7 +36448,7 @@ class Mission
 							{
 							};
 							id=4023;
-							atlOffset=116.64503;
+							atlOffset=116.645;
 						};
 						class Item128
 						{
@@ -88013,7 +88013,7 @@ class Mission
 									flags=3;
 									class Attributes
 									{
-										init="[this] call AR_fnc_loadLoadoutMenu;" \n "private _helmet = """";" \n "_helmet = [""ar_p1_helmet_v1"",""ar_p2_helmet_v1""] select (getMissionConfigValue [""AR_Phase"",1]);" \n "this addHeadgear _helmet;" \n "";
+										init="[this, stan] call BIS_fnc_attachToRelative;" \n "[this] call AR_fnc_loadLoadoutMenu;" \n "private _helmet = """";" \n "_helmet = [""ar_p1_helmet_v1"",""ar_p2_helmet_v1""] select (getMissionConfigValue [""AR_Phase"",1]);" \n "this addHeadgear _helmet;" \n "";
 										disableSimulation=1;
 									};
 									id=2870;
@@ -110909,6 +110909,7 @@ class Mission
 									flags=7;
 									class Attributes
 									{
+										init="[this, stan] call BIS_fnc_attachToRelative;";
 										name="herve1";
 										disableSimulation=1;
 										ignoreByDynSimulGrid=1;
@@ -110916,7 +110917,7 @@ class Mission
 									};
 									id=3890;
 									type="B_Soldier_VR_F";
-									atlOffset=0.00010681152;
+									atlOffset=0.00011444092;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -111239,11 +111240,11 @@ class Mission
 							{
 							};
 							id=3889;
-							atlOffset=0.00010681152;
+							atlOffset=0.00011444092;
 						};
 					};
 					id=3850;
-					atlOffset=0.37085724;
+					atlOffset=0.37086487;
 				};
 				class Item11
 				{
