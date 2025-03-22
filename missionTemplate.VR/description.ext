@@ -3,6 +3,8 @@ onLoadName = "Main Server";
 onLoadMission = "Vous êtes un Clone Trooper à la solde de la Grande Armée de la République.";
 loadScreen = "\AR_Core\data\loadscreen_co.paa"; // loadScreen représente le chemin d'accès à une image pour le chargement.
 
+versionRequired = 3.0; // Version minimale du mod adeptus requis pour la mission.
+
 AR_ComsList[] = {{"Convocation CO/NCO", "Les Officiers et Sous-Officiers sont demandées sur le pont Principal"}};
 AR_Phase = 1; // 0 = Phase 1 | 1 = Phase 2
 
