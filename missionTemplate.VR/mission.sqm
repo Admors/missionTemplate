@@ -17,14 +17,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3691;
+		nextID=3791;
 	};
 	class Camera
 	{
-		pos[]={813.77094,124.38723,4304.0747};
-		dir[]={-0.23410892,-0.51675415,0.82350916};
-		up[]={-0.14130618,0.85613269,0.49706116};
-		aside[]={0.96189225,-8.3513441e-08,0.27344978};
+		pos[]={762.77985,124.7592,4275.6484};
+		dir[]={-0.042544268,-0.55734134,-0.82922423};
+		up[]={-0.028557969,0.83028615,-0.55660683};
+		aside[]={-0.99871236,-4.1163003e-07,0.051239461};
 	};
 };
 binarizationWanted=0;
@@ -21808,7 +21808,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=2;
+		items=1;
 		class Item0
 		{
 			dataType="Layer";
@@ -21823,7 +21823,7 @@ class Mission
 					state=1;
 					class Entities
 					{
-						items=6;
+						items=7;
 						class Item0
 						{
 							dataType="Group";
@@ -29284,6 +29284,87 @@ class Mission
 										{
 											singleType="STRING";
 											value="Gamorr";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item6
+						{
+							dataType="Group";
+							side="West";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={808.30499,119.10544,4315.6396};
+										angles[]={0,3.1415927,0};
+									};
+									side="West";
+									flags=6;
+									class Attributes
+									{
+										name="zeus";
+										description="Zeus";
+										isPlayer=1;
+									};
+									id=5343;
+									type="AR_Trooper_V1_P2";
+									atlOffset=0.038154602;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="Male07ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1.01;
+												};
+											};
+										};
+										nAttributes=2;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=5316;
+							atlOffset=-5;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="groupID";
+									expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Zeus";
 										};
 									};
 								};
@@ -38102,6 +38183,7 @@ class Mission
 				{
 					dataType="Layer";
 					name="Hallway";
+					state=1;
 					class Entities
 					{
 						items=4;
@@ -121886,7 +121968,6 @@ class Mission
 									flags=7;
 									class Attributes
 									{
-										init="[this, stan] call BIS_fnc_attachToRelative;";
 										name="herve1";
 										disableSimulation=1;
 										ignoreByDynSimulGrid=1;
@@ -121894,7 +121975,7 @@ class Mission
 									};
 									id=3890;
 									type="B_Soldier_VR_F";
-									atlOffset=0.00010681152;
+									atlOffset=0.00011444092;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -122289,87 +122370,6 @@ class Mission
 			};
 			id=0;
 			atlOffset=108.7411;
-		};
-		class Item1
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={808.30499,119.10544,4315.6396};
-						angles[]={0,3.1415927,0};
-					};
-					side="West";
-					flags=6;
-					class Attributes
-					{
-						name="zeus";
-						description="Zeus";
-						isPlayer=1;
-					};
-					id=5343;
-					type="AR_Trooper_V1_P2";
-					atlOffset=0.038154602;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=5316;
-			atlOffset=0.038154602;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
-					class Value
-					{
-						class data
-						{
-							singleType="STRING";
-							value="Zeus";
-						};
-					};
-				};
-				nAttributes=1;
-			};
 		};
 	};
 	class Connections
