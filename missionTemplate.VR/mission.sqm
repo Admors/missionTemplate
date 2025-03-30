@@ -17,14 +17,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3791;
+		nextID=3841;
 	};
 	class Camera
 	{
-		pos[]={762.77985,124.7592,4275.6484};
-		dir[]={-0.042544268,-0.55734134,-0.82922423};
-		up[]={-0.028557969,0.83028615,-0.55660683};
-		aside[]={-0.99871236,-4.1163003e-07,0.051239461};
+		pos[]={771.32935,153.28546,4353.3667};
+		dir[]={0.058734905,-0.27262405,-0.96043748};
+		up[]={0.016643027,0.96209127,-0.27216759};
+		aside[]={-0.9982149,-6.7592191e-07,-0.061046276};
 	};
 };
 binarizationWanted=0;
@@ -705,6 +705,19 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="ENH_dynamicGroups";
+			expression="                if (!is3DEN && isMultiplayer && _value) then                {                    if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};                    if (hasInterface) then                    {                        0 spawn                        {                            scriptName 'ENH_Attribute_DynamicGroups';                            waitUntil {!isNull player};                            ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;                        };                    };                };            ";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -724,19 +737,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="ENH_dynamicGroups";
-			expression="                if (!is3DEN && isMultiplayer && _value) then                {                    if (isServer) then {['Initialize'] call BIS_fnc_dynamicGroups};                    if (hasInterface) then                    {                        0 spawn                        {                            scriptName 'ENH_Attribute_DynamicGroups';                            waitUntil {!isNull player};                            ['InitializePlayer', [player]] call BIS_fnc_dynamicGroups;                        };                    };                };            ";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
 				};
 			};
 		};
@@ -33854,7 +33854,7 @@ class Mission
 						};
 					};
 					id=100;
-					atlOffset=185.96133;
+					atlOffset=183.96132;
 				};
 				class Item2
 				{
@@ -38183,7 +38183,6 @@ class Mission
 				{
 					dataType="Layer";
 					name="Hallway";
-					state=1;
 					class Entities
 					{
 						items=4;
@@ -38191,7 +38190,6 @@ class Mission
 						{
 							dataType="Layer";
 							name="Hallway_Structures";
-							state=1;
 							class Entities
 							{
 								items=37;
@@ -38720,7 +38718,7 @@ class Mission
 									};
 									id=497;
 									type="land_3AS_Venator_Corridor";
-									atlOffset=10.503036;
+									atlOffset=8.5030365;
 								};
 								class Item32
 								{
@@ -38738,7 +38736,7 @@ class Mission
 									};
 									id=498;
 									type="3AS_Venator_Door_Static_Prop";
-									atlOffset=10.999062;
+									atlOffset=8.999054;
 								};
 								class Item33
 								{
@@ -38751,7 +38749,7 @@ class Mission
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=506;
 									type="Logic";
-									atlOffset=0.11975098;
+									atlOffset=5.3429337;
 								};
 								class Item34
 								{
@@ -38795,7 +38793,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={781.75,126.13298,4326.375};
+												position[]={781.75,128.13298,4326.375};
 											};
 											side="Empty";
 											flags=1;
@@ -38804,14 +38802,14 @@ class Mission
 											};
 											id=4537;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6866608;
+											atlOffset=5.6866608;
 										};
 										class Item1
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={776.625,126.13298,4306.25};
+												position[]={776.625,128.13298,4306.25};
 											};
 											side="Empty";
 											flags=1;
@@ -38820,14 +38818,14 @@ class Mission
 											};
 											id=4538;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.688797;
+											atlOffset=5.688797;
 										};
 										class Item2
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={776.625,126.13298,4296.375};
+												position[]={776.625,128.13298,4296.375};
 											};
 											side="Empty";
 											flags=1;
@@ -38836,14 +38834,14 @@ class Mission
 											};
 											id=4539;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.688797;
+											atlOffset=5.688797;
 										};
 										class Item3
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={776.625,126.13298,4286.375};
+												position[]={776.625,128.13298,4286.375};
 											};
 											side="Empty";
 											flags=1;
@@ -38852,14 +38850,14 @@ class Mission
 											};
 											id=4540;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6913452;
+											atlOffset=5.6913452;
 										};
 										class Item4
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={776.625,126.13298,4276.375};
+												position[]={776.625,128.13298,4276.375};
 											};
 											side="Empty";
 											flags=1;
@@ -38868,14 +38866,14 @@ class Mission
 											};
 											id=4541;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.69133;
+											atlOffset=5.69133;
 										};
 										class Item5
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={776.625,126.13298,4268.125};
+												position[]={776.625,128.13298,4268.125};
 											};
 											side="Empty";
 											flags=1;
@@ -38884,14 +38882,14 @@ class Mission
 											};
 											id=4542;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.69133;
+											atlOffset=5.69133;
 										};
 										class Item6
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={786.625,126.13298,4268.125};
+												position[]={786.625,128.13298,4268.125};
 											};
 											side="Empty";
 											flags=1;
@@ -38900,14 +38898,14 @@ class Mission
 											};
 											id=4543;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.69133;
+											atlOffset=5.69133;
 										};
 										class Item7
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={796.625,126.13298,4268.125};
+												position[]={796.625,128.13298,4268.125};
 											};
 											side="Empty";
 											flags=1;
@@ -38916,14 +38914,14 @@ class Mission
 											};
 											id=4544;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6917801;
+											atlOffset=5.6917801;
 										};
 										class Item8
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={766.625,126.13298,4287.125};
+												position[]={766.625,128.13298,4287.125};
 											};
 											side="Empty";
 											flags=1;
@@ -38932,14 +38930,14 @@ class Mission
 											};
 											id=4555;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6907959;
+											atlOffset=5.6907959;
 										};
 										class Item9
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={756.625,126.13298,4287.125};
+												position[]={756.625,128.13298,4287.125};
 											};
 											side="Empty";
 											flags=1;
@@ -38948,14 +38946,14 @@ class Mission
 											};
 											id=4557;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6907959;
+											atlOffset=5.6907959;
 										};
 										class Item10
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={736.625,126.13298,4287.125};
+												position[]={736.625,128.13298,4287.125};
 											};
 											side="Empty";
 											flags=1;
@@ -38964,14 +38962,14 @@ class Mission
 											};
 											id=4558;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6922836;
+											atlOffset=5.6922836;
 										};
 										class Item11
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={746.625,126.13298,4287.125};
+												position[]={746.625,128.13298,4287.125};
 											};
 											side="Empty";
 											flags=1;
@@ -38980,14 +38978,14 @@ class Mission
 											};
 											id=4559;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6878662;
+											atlOffset=5.6878662;
 										};
 										class Item12
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={726.625,126.13298,4287.125};
+												position[]={726.625,128.13298,4287.125};
 											};
 											side="Empty";
 											flags=1;
@@ -38996,14 +38994,14 @@ class Mission
 											};
 											id=4560;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6922836;
+											atlOffset=5.6922836;
 										};
 										class Item13
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={720.75,126.13298,4287.125};
+												position[]={720.75,128.13298,4287.125};
 											};
 											side="Empty";
 											flags=1;
@@ -39012,14 +39010,14 @@ class Mission
 											};
 											id=4561;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.694809;
+											atlOffset=5.694809;
 										};
 										class Item14
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={786.625,126.13298,4286.375};
+												position[]={786.625,128.13298,4286.375};
 											};
 											side="Empty";
 											flags=1;
@@ -39028,14 +39026,14 @@ class Mission
 											};
 											id=4562;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6913452;
+											atlOffset=5.6913452;
 										};
 										class Item15
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={796.625,126.13298,4286.375};
+												position[]={796.625,128.13298,4286.375};
 											};
 											side="Empty";
 											flags=1;
@@ -39044,14 +39042,14 @@ class Mission
 											};
 											id=4563;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6925812;
+											atlOffset=5.6925812;
 										};
 										class Item16
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={806.625,126.13298,4286.375};
+												position[]={806.625,128.13298,4286.375};
 											};
 											side="Empty";
 											flags=1;
@@ -39060,14 +39058,14 @@ class Mission
 											};
 											id=4564;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.7031708;
+											atlOffset=5.7031708;
 										};
 										class Item17
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={816.625,126.13298,4286.375};
+												position[]={816.625,128.13298,4286.375};
 											};
 											side="Empty";
 											flags=1;
@@ -39076,14 +39074,14 @@ class Mission
 											};
 											id=4565;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6951904;
+											atlOffset=5.6951904;
 										};
 										class Item18
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={826.625,126.13298,4286.375};
+												position[]={826.625,128.13298,4286.375};
 											};
 											side="Empty";
 											flags=1;
@@ -39092,14 +39090,14 @@ class Mission
 											};
 											id=4566;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6951904;
+											atlOffset=5.6951904;
 										};
 										class Item19
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={834.625,126.13298,4286.375};
+												position[]={834.625,128.13298,4286.375};
 											};
 											side="Empty";
 											flags=1;
@@ -39108,14 +39106,14 @@ class Mission
 											};
 											id=4567;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.697052;
+											atlOffset=5.697052;
 										};
 										class Item20
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={806.625,126.13298,4296.375};
+												position[]={806.625,128.13298,4296.375};
 											};
 											side="Empty";
 											flags=1;
@@ -39124,14 +39122,14 @@ class Mission
 											};
 											id=4568;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.7262573;
+											atlOffset=5.7262573;
 										};
 										class Item21
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={796.625,126.13298,4276.875};
+												position[]={796.625,128.13298,4276.875};
 											};
 											side="Empty";
 											flags=1;
@@ -39140,14 +39138,14 @@ class Mission
 											};
 											id=4569;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=120.375;
+											atlOffset=122.375;
 										};
 										class Item22
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={796.625,126.13298,4262};
+												position[]={796.625,128.13298,4262};
 											};
 											side="Empty";
 											flags=1;
@@ -39156,14 +39154,14 @@ class Mission
 											};
 											id=4570;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.6917801;
+											atlOffset=5.6917801;
 										};
 										class Item23
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={806.625,126.13298,4262};
+												position[]={806.625,128.13298,4262};
 											};
 											side="Empty";
 											flags=1;
@@ -39172,14 +39170,14 @@ class Mission
 											};
 											id=4571;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=120.375;
+											atlOffset=122.375;
 										};
 										class Item24
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={806.625,126.13298,4268.125};
+												position[]={806.625,128.13298,4268.125};
 											};
 											side="Empty";
 											flags=1;
@@ -39188,14 +39186,14 @@ class Mission
 											};
 											id=4572;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.7149811;
+											atlOffset=5.7149811;
 										};
 										class Item25
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={806.625,126.13298,4276.875};
+												position[]={806.625,128.13298,4276.875};
 											};
 											side="Empty";
 											flags=1;
@@ -39204,14 +39202,14 @@ class Mission
 											};
 											id=4573;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=2.5755844;
+											atlOffset=4.5755844;
 										};
 										class Item26
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={816.625,126.13298,4277.125};
+												position[]={816.625,128.13298,4277.125};
 											};
 											side="Empty";
 											flags=1;
@@ -39220,14 +39218,14 @@ class Mission
 											};
 											id=4574;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.7162476;
+											atlOffset=5.7162476;
 										};
 										class Item27
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={816.625,126.13298,4262.25};
+												position[]={816.625,128.13298,4262.25};
 											};
 											side="Empty";
 											flags=1;
@@ -39236,14 +39234,14 @@ class Mission
 											};
 											id=4575;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=120.375;
+											atlOffset=122.375;
 										};
 										class Item28
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={816.625,126.13298,4268.375};
+												position[]={816.625,128.13298,4268.375};
 											};
 											side="Empty";
 											flags=1;
@@ -39252,14 +39250,14 @@ class Mission
 											};
 											id=4576;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.7150192;
+											atlOffset=5.7150192;
 										};
 										class Item29
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={756.625,126.13298,4277.125};
+												position[]={756.625,128.13298,4277.125};
 											};
 											side="Empty";
 											flags=1;
@@ -39268,14 +39266,14 @@ class Mission
 											};
 											id=4577;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=3.680954;
+											atlOffset=5.680954;
 										};
 										class Item30
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={766.625,126.13298,4277.125};
+												position[]={766.625,128.13298,4277.125};
 											};
 											side="Empty";
 											flags=1;
@@ -39284,14 +39282,14 @@ class Mission
 											};
 											id=4578;
 											type="3AS_Prop_Baseplate_10x10";
-											atlOffset=120.375;
+											atlOffset=122.375;
 										};
 										class Item31
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={736.625,126.12936,4326.25};
+												position[]={736.625,128.12936,4326.25};
 											};
 											side="Empty";
 											flags=1;
@@ -39300,14 +39298,14 @@ class Mission
 											};
 											id=4534;
 											type="3AS_Prop_Baseplate_30x30";
-											atlOffset=3.6897278;
+											atlOffset=5.6897278;
 										};
 										class Item32
 										{
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={766.625,126.12936,4326.25};
+												position[]={766.625,128.12936,4326.25};
 											};
 											side="Empty";
 											flags=1;
@@ -39316,21 +39314,20 @@ class Mission
 											};
 											id=4536;
 											type="3AS_Prop_Baseplate_30x30";
-											atlOffset=3.6895599;
+											atlOffset=5.6895599;
 										};
 									};
 									id=4579;
-									atlOffset=3.8280563;
+									atlOffset=5.8280563;
 								};
 							};
 							id=459;
-							atlOffset=119.99124;
+							atlOffset=120.99124;
 						};
 						class Item1
 						{
 							dataType="Layer";
 							name="Hallway_Lights";
-							state=1;
 							class Entities
 							{
 								items=27;
@@ -39339,338 +39336,338 @@ class Mission
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={808.21698,126.99999,4286.7271};
+										position[]={808.25,125.875,4286.75};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=509;
 									type="Logic";
-									atlOffset=0.12806702;
+									atlOffset=4.2031708;
 								};
 								class Item1
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={777.45026,126.99999,4286.791};
+										position[]={777.48328,125.875,4286.814};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=510;
 									type="Logic";
-									atlOffset=0.12806702;
+									atlOffset=4.1913452;
 								};
 								class Item2
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={794.987,126.99999,4286.6563};
+										position[]={795.02002,125.875,4286.6792};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=511;
 									type="Logic";
-									atlOffset=0.12806702;
+									atlOffset=4.1925812;
 								};
 								class Item3
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={760.51788,126.99999,4286.707};
+										position[]={760.5509,125.875,4286.73};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=512;
 									type="Logic";
-									atlOffset=0.12805939;
+									atlOffset=4.1907959;
 								};
 								class Item4
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={729.69049,126.99999,4286.7241};
+										position[]={729.72351,125.875,4286.7471};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=513;
 									type="Logic";
-									atlOffset=0.12805939;
+									atlOffset=4.1922836;
 								};
 								class Item5
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={747.28644,126.99999,4286.6377};
+										position[]={747.31946,125.875,4286.6606};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=514;
 									type="Logic";
-									atlOffset=0.12805939;
+									atlOffset=4.1878662;
 								};
 								class Item6
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={827.26575,126.99999,4286.6729};
+										position[]={827.29877,125.875,4286.6958};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=515;
 									type="Logic";
-									atlOffset=0.12806702;
+									atlOffset=4.1951904;
 								};
 								class Item7
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={777.60254,126.99999,4314.521};
+										position[]={777.63556,125.875,4314.5439};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=516;
 									type="Logic";
-									atlOffset=0.13521576;
+									atlOffset=4.188797;
 								};
 								class Item8
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={777.48254,126.98425,4326.1938};
+										position[]={777.51556,125.85926,4326.2168};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=517;
 									type="Logic";
-									atlOffset=0.11232758;
+									atlOffset=4.1709213;
 								};
 								class Item9
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={777.55688,126.98425,4299.0146};
+										position[]={777.5899,125.85926,4299.0376};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=518;
 									type="Logic";
-									atlOffset=0.11232758;
+									atlOffset=4.1730576;
 								};
 								class Item10
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={759.28101,126.99999,4277.7227};
+										position[]={759.31403,125.875,4277.7456};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=519;
 									type="Logic";
-									atlOffset=0.12806702;
+									atlOffset=4.1810837;
 								};
 								class Item11
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={777.10541,126.99999,4277.6025};
+										position[]={777.13843,125.875,4277.6255};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=520;
 									type="Logic";
-									atlOffset=0.12806702;
+									atlOffset=4.1913452;
 								};
 								class Item12
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={793.93719,126.99999,4266.0254};
+										position[]={793.97021,125.875,4266.0483};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=521;
 									type="Logic";
-									atlOffset=0.12805939;
+									atlOffset=4.1917801;
 								};
 								class Item13
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={762.69952,126.99999,4268.6074};
+										position[]={762.73254,125.875,4268.6304};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=522;
 									type="Logic";
-									atlOffset=5.3167725;
+									atlOffset=4.1917801;
 								};
 								class Item14
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={777.96283,126.99999,4268.7637};
+										position[]={777.99585,125.875,4268.7866};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=523;
 									type="Logic";
-									atlOffset=0.12806702;
+									atlOffset=4.19133;
 								};
 								class Item15
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={765.47931,127.00542,4326.1528};
+										position[]={765.51233,125.88042,4326.1758};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=524;
 									type="Logic";
-									atlOffset=0.14064789;
+									atlOffset=4.1949844;
 								};
 								class Item16
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={748.10376,127.00542,4326.2783};
+										position[]={748.13678,125.88042,4326.3013};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=525;
 									type="Logic";
-									atlOffset=0.14064789;
+									atlOffset=4.1947861;
 								};
 								class Item17
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={730.76404,127.00542,4326.2412};
+										position[]={730.79706,125.88042,4326.2642};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=526;
 									type="Logic";
-									atlOffset=0.14064789;
+									atlOffset=4.1949844;
 								};
 								class Item18
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={730.69812,127.00542,4317.1621};
+										position[]={730.73114,125.88042,4317.1851};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=527;
 									type="Logic";
-									atlOffset=0.14064026;
+									atlOffset=4.3389359;
 								};
 								class Item19
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={756.80334,127.00542,4326.2798};
+										position[]={756.83636,125.88042,4326.3027};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=528;
 									type="Logic";
-									atlOffset=0.14064789;
+									atlOffset=4.1951523;
 								};
 								class Item20
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={739.23004,127.00542,4326.1523};
+										position[]={739.26306,125.88042,4326.1753};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=529;
 									type="Logic";
-									atlOffset=0.14064789;
+									atlOffset=4.1951523;
 								};
 								class Item21
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={730.67297,127.04552,4335.4888};
+										position[]={730.70599,125.92052,4335.5117};
 										angles[]={0,3.1415949,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=530;
 									type="Logic";
-									atlOffset=0.18074799;
+									atlOffset=4.3389282;
 								};
 								class Item22
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={748.08008,127.00996,4335.4424};
+										position[]={748.1131,125.88496,4335.4653};
 										angles[]={0,3.1415949,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=531;
 									type="Logic";
-									atlOffset=0.14518738;
+									atlOffset=4.3389435;
 								};
 								class Item23
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={765.4624,126.99242,4335.4971};
+										position[]={765.49542,125.86742,4335.52};
 										angles[]={0,3.1415949,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=532;
 									type="Logic";
-									atlOffset=0.1276474;
+									atlOffset=4.3389206;
 								};
 								class Item24
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={765.41901,127.01012,4317.0332};
+										position[]={765.45203,125.88512,4317.0562};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=533;
 									type="Logic";
-									atlOffset=0.14533997;
+									atlOffset=4.3389359;
 								};
 								class Item25
 								{
 									dataType="Logic";
 									class PositionInfo
 									{
-										position[]={748.02887,127.04162,4317.0195};
+										position[]={748.06189,125.91663,4317.0425};
 										angles[]={0,2.3841858e-07,0};
 									};
 									init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 									id=534;
 									type="Logic";
-									atlOffset=0.17684174;
+									atlOffset=4.3389435;
 								};
 								class Item26
 								{
@@ -39687,7 +39684,7 @@ class Mission
 								};
 							};
 							id=508;
-							atlOffset=118.4843;
+							atlOffset=117.92181;
 						};
 						class Item2
 						{
@@ -51419,7 +51416,7 @@ class Mission
 						};
 					};
 					id=458;
-					atlOffset=117.70912;
+					atlOffset=117.76381;
 				};
 				class Item4
 				{
@@ -64934,10 +64931,9 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={861.125,122.10071,4273.625};
+												position[]={862.375,122.04482,4273.6318};
 											};
 											side="Empty";
-											flags=4;
 											class Attributes
 											{
 												init="[this," \n "LEFT_HANGAR_SPAWN_RIGHT," \n "(getMissionConfigValue [""AR_TransportAerialVehicles"",[""""]])" \n "] call AR_fnc_loadGarage;";
@@ -64945,7 +64941,7 @@ class Mission
 											};
 											id=4597;
 											type="3AS_Terminal_Short";
-											atlOffset=0.048881531;
+											atlOffset=116.44411;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -65140,7 +65136,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={861.125,122.10771,4299.9932};
+												position[]={862.375,122.05183,4300};
 											};
 											side="Empty";
 											flags=4;
@@ -65151,7 +65147,6 @@ class Mission
 											};
 											id=4596;
 											type="3AS_Terminal_Short";
-											atlOffset=0.055885315;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -65172,11 +65167,11 @@ class Mission
 										};
 									};
 									id=4612;
-									atlOffset=0.096443176;
+									atlOffset=0.066757202;
 								};
 							};
 							id=645;
-							atlOffset=6.1706238;
+							atlOffset=6.1557846;
 						};
 						class Item1
 						{
@@ -77580,11 +77575,10 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={693.15399,122.2597,4299.5698};
+												position[]={692.00299,122.17581,4299.5469};
 												angles[]={0,3.1415927,0};
 											};
 											side="Empty";
-											flags=4;
 											class Attributes
 											{
 												init="[this," \n "RIGHT_HANGAR_SPAWN_RIGHT," \n "(getMissionConfigValue [""AR_TransportAerialVehicles"",[""""]])" \n "] call AR_fnc_loadGarage;";
@@ -77592,7 +77586,7 @@ class Mission
 											};
 											id=4599;
 											type="3AS_Terminal_Short";
-											atlOffset=0.082870483;
+											atlOffset=116.5751;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -77787,7 +77781,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={693.151,122.26071,4273.8979};
+												position[]={692,122.17683,4273.875};
 												angles[]={0,3.1415927,0};
 											};
 											side="Empty";
@@ -77799,7 +77793,6 @@ class Mission
 											};
 											id=4598;
 											type="3AS_Terminal_Short";
-											atlOffset=0.083885193;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -77820,11 +77813,11 @@ class Mission
 										};
 									};
 									id=4613;
-									atlOffset=0.1115036;
+									atlOffset=0.066947937;
 								};
 							};
 							id=1374;
-							atlOffset=5.7577133;
+							atlOffset=5.7354355;
 						};
 						class Item2
 						{
@@ -98930,7 +98923,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={778.45801,122.30771,4241.9282};
+												position[]={778.5,122.21518,4241.625};
 												angles[]={0,1.5707964,0};
 											};
 											side="Empty";
@@ -98942,7 +98935,6 @@ class Mission
 											};
 											id=4600;
 											type="3AS_Terminal_Short";
-											atlOffset=0.00028991699;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -98963,15 +98955,15 @@ class Mission
 										};
 									};
 									id=4614;
-									atlOffset=0.017044067;
+									atlOffset=0.063018799;
 								};
 							};
 							id=2110;
-							atlOffset=5.0980682;
+							atlOffset=5.0749359;
 						};
 					};
 					id=644;
-					atlOffset=5.4998627;
+					atlOffset=5.4790192;
 				};
 				class Item7
 				{
@@ -118061,7 +118053,7 @@ class Mission
 							init="call{light = ""#lightpoint"" createVehicleLocal position this; " \n "light setLightBrightness 0.3; " \n "light setLightAmbient[0, 0, 0]; " \n "light setLightColor[10, 10, 10]; " \n "light lightAttachObject [this, [0,0,0]]; " \n "light setDir (getDir this);" \n "light setLightDayLight false;}";
 							id=3681;
 							type="Logic";
-							atlOffset=0.47071075;
+							atlOffset=5.6835251;
 						};
 					};
 					id=2864;
@@ -122298,7 +122290,7 @@ class Mission
 							{
 							};
 							id=3889;
-							atlOffset=-5;
+							atlOffset=0.00011444092;
 						};
 						class Item3
 						{
@@ -122334,7 +122326,7 @@ class Mission
 						};
 					};
 					id=3850;
-					atlOffset=101.47418;
+					atlOffset=0.092712402;
 				};
 				class Item11
 				{
@@ -122369,7 +122361,7 @@ class Mission
 				};
 			};
 			id=0;
-			atlOffset=108.7411;
+			atlOffset=112.56886;
 		};
 	};
 	class Connections
