@@ -6,6 +6,7 @@
 
 if (hasInterface) then {
 	[player, 60] call AR_fnc_underFire;
+	[player, 60] call AR_fnc_respawnDelay;
 };
 
 if (isServer) then {
