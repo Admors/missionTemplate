@@ -11,7 +11,7 @@ AR_Phase = 1; // 0 = Phase 1 | 1 = Phase 2
 AR_TerrestrialVehicles[] = {"AR_Hunter", "AR_Pandur_TSP", "AR_ATTE", "AR_M411_APC", "AR_M412_IFV", "AR_M413_MGS", "3AS_Barc", "3AS_BarcSideCar", "3AS_Saber_M1", "3AS_Saber_M1G", "3AS_Saber_Super"};
 AR_TransportAerialVehicles[] = {"AR_LAAT_I_Mk1", "AR_LAAT_I_Mk1Lights", "AR_LAAT_I_Mk2", "AR_LAAT_I_Mk2Lights", "3AS_LAATC", "3AS_Nu_REP_F"};
 AR_AttackAerialVehicles[] = {"3AS_ARC_170_Yellow", "3AS_Z95_Yellow", "3AS_BTLB_Bomber_ShadowLeader"};
-AR_SupplyCrate[] = {"AR_Supply_Ammo", "AR_Supply_AT", "AR_Supply_AA", "AR_Supply_Grenade", "AR_Supply_Medical"};
+AR_SupplyCrate[] = {"AR_Supply_Ammo", "AR_Supply_AT", "AR_Supply_AA", "AR_Supply_Grenade", "AR_Supply_Medical", "AR_Supply_Grenadier", "AR_Supply_Weapons"};
 
 AR_ZeusAllowed[] = {"76561198113173701", "76561198063259158", "76561198134513977", "76561198218934540", "76561198127318244", "76561198308368404", "76561198272941463", "76561198254448634", "76561198063711746"};
 
